@@ -11,7 +11,7 @@ export default function TermsOfServicePage() {
 
             <div className="bg-white border-b border-gray-100 pt-32 pb-16">
                 <div className="container mx-auto px-4 text-center">
-                    <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-2xl mb-6 text-blue-600">
+                    <div className="inline-flex items-center justify-center w-16 h-16 bg-teal-100 rounded-2xl mb-6 text-teal-600">
                         <ScrollText className="w-8 h-8" />
                     </div>
                     <h1 className="text-4xl md:text-5xl font-black font-display text-gray-900 mb-6">Terms of Service</h1>
@@ -77,7 +77,7 @@ export default function TermsOfServicePage() {
 
                 </div>
 
-                <div className="mt-12 p-6 bg-blue-50 rounded-2xl border border-blue-100 text-center text-blue-800 text-sm font-medium">
+                <div className="mt-12 p-6 bg-teal-50 rounded-2xl border border-teal-100 text-center text-teal-800 text-sm font-medium">
                     We reserve the right to modify terms at any time without prior notice.
                 </div>
             </div>

@@ -18,8 +18,7 @@ export function Navbar() {
 
     useEffect(() => {
         setMounted(true);
-        // Check for logged in user
-        const storedUser = localStorage.getItem('tripMitraUser');
+        const storedUser = localStorage.getItem('wanderlyUser');
         if (storedUser) {
             try {
                 setUser(JSON.parse(storedUser));
@@ -27,9 +26,8 @@ export function Navbar() {
                 console.error("Failed to parse user data", e);
             }
         }
-
         const handleScroll = () => {
-            if (window.scrollY > 10) {
+            if (window.scrollY > 20) {
                 setIsScrolled(true);
             } else {
                 setIsScrolled(false);
@@ -40,38 +38,47 @@ export function Navbar() {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    // Prevent hydration mismatch for theme
     if (!mounted) return null;
 
     return (
         <nav
             className={cn(
-                "fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out",
+                "fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out",
                 isScrolled
-                    ? "bg-white/80 dark:bg-gray-900/90 backdrop-blur-md shadow-sm py-4 text-gray-900 dark:text-white"
-                    : "bg-transparent py-6 text-white"
+                    ? "bg-white/95 dark:bg-primary/95 backdrop-blur-2xl py-5 border-b border-gray-100 dark:border-white/5 shadow-sm"
+                    : "bg-transparent py-8"
             )}
         >
-            <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
-                {/* Logo */}
-                <Link href="/" className="group flex items-center gap-1">
-                    <div className={cn("relative flex items-baseline transition-all duration-300", !isScrolled && "drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)]")}>
-                        <span className={cn("text-2xl font-black font-display tracking-tight transition-colors", isScrolled ? "text-gray-900 dark:text-white" : "text-white")}>
-                            Trip<span className={cn("transition-colors duration-300", isScrolled ? "text-blue-600" : "text-blue-400")}>Mitra</span>
+            <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
+
+                {/* Logo - Modern Global Style */}
+                <Link href="/" className="group flex items-center">
+                    <div className="relative flex items-center">
+                        <span className={cn(
+                            "text-xl font-black font-display tracking-[0.25em] transition-colors duration-500 uppercase",
+                            isScrolled ? "text-primary dark:text-white" : "text-white"
+                        )}>
+                            Wanderly
                         </span>
-                        <span className="text-2xl font-black font-display text-yellow-500">Aj</span>
-                        {/* Underline decoration */}
-                        <div className={cn("absolute -bottom-1 left-0 w-1/3 h-1 rounded-full group-hover:w-full transition-all duration-300", isScrolled ? "bg-blue-600" : "bg-white")}></div>
+
+                        {/* Subtle dot accent */}
+                        <div className={cn(
+                            "ml-1 w-1.5 h-1.5 rounded-full bg-accent transition-all duration-500",
+                            isScrolled ? "opacity-100" : "opacity-0 group-hover:opacity-100"
+                        )}></div>
                     </div>
                 </Link>
 
-                {/* Desktop Links */}
-                <div className="hidden md:flex items-center space-x-8">
+                {/* Desktop Navigation */}
+                <div className="hidden lg:flex items-center space-x-10">
                     {navLinks.map((link) => (
                         <Link
                             key={link.name}
                             href={link.href}
-                            className="text-sm font-medium hover:text-accent transition-colors"
+                            className={cn(
+                                "text-[11px] font-black uppercase tracking-[0.2em] transition-all duration-300 hover:text-accent",
+                                isScrolled ? "text-primary/70 dark:text-white/70" : "text-white/80"
+                            )}
                         >
                             {link.name}
                         </Link>
@@ -80,37 +87,52 @@ export function Navbar() {
 
                 {/* Right Actions */}
                 <div className="hidden md:flex items-center space-x-6">
+                    {/* Theme Toggle */}
                     <button
                         onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                        className="hover:text-accent transition-colors p-2 rounded-full hover:bg-white/10"
+                        className={cn(
+                            "p-2.5 rounded-2xl transition-all duration-300 border",
+                            isScrolled
+                                ? "border-gray-100 dark:border-white/10 hover:bg-gray-50 dark:hover:bg-white/5 text-primary dark:text-white"
+                                : "border-white/10 hover:bg-white/10 text-white"
+                        )}
                         aria-label="Toggle Theme"
                     >
-                        {theme === "dark" ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-                    </button>
-                    <button className="hover:text-accent transition-colors">
-                        <Search className="w-5 h-5" />
+                        {theme === "dark" ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
                     </button>
 
                     {user ? (
-                        <div className="flex items-center space-x-3 bg-white/10 px-4 py-2 rounded-full border border-white/20 backdrop-blur-sm">
-                            <div className="w-8 h-8 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 flex items-center justify-center text-white font-bold shadow-md">
+                        <div className={cn(
+                            "flex items-center gap-4 pl-4 border-l",
+                            isScrolled ? "border-gray-100 dark:border-white/10" : "border-white/10"
+                        )}>
+                            <div className="w-9 h-9 rounded-full bg-accent flex items-center justify-center text-white font-black text-xs shadow-xl">
                                 {user.name.charAt(0)}
                             </div>
-                            <span className="font-semibold text-sm hidden lg:block">Hi, {user.name.split(' ')[0]}</span>
-                            <button
-                                onClick={() => {
-                                    localStorage.removeItem('tripMitraUser');
-                                    setUser(null);
-                                    window.location.reload();
-                                }}
-                                className="text-xs text-red-400 hover:text-red-300 ml-2 font-bold"
-                            >
-                                Logout
-                            </button>
+                            <div className="flex flex-col">
+                                <span className={cn("text-[10px] font-black uppercase tracking-widest", isScrolled ? "text-primary dark:text-white" : "text-white")}>
+                                    Welcome, {user.name.split(' ')[0]}
+                                </span>
+                                <button
+                                    onClick={() => {
+                                        localStorage.removeItem('wanderlyUser');
+                                        window.location.reload();
+                                    }}
+                                    className="text-[9px] font-bold text-accent hover:underline text-left"
+                                >
+                                    Sign Out
+                                </button>
+                            </div>
                         </div>
                     ) : (
-                        <Link href="/login" className="flex items-center space-x-2 font-medium hover:text-accent transition-colors">
-                            <User className="w-5 h-5" />
+                        <Link
+                            href="/login"
+                            className={cn(
+                                "flex items-center gap-2 text-[11px] font-black uppercase tracking-[0.2em] transition-colors",
+                                isScrolled ? "text-primary/80 dark:text-white/80 hover:text-accent" : "text-white hover:text-accent"
+                            )}
+                        >
+                            <User className="w-4 h-4" />
                             <span>Login</span>
                         </Link>
                     )}
@@ -118,57 +140,65 @@ export function Navbar() {
                     <Link
                         href="/book"
                         className={cn(
-                            "px-5 py-2 rounded-full font-semibold transition-all hover:shadow-lg",
+                            "px-8 py-3.5 rounded-2xl font-black text-[11px] uppercase tracking-[0.2em] transition-all duration-500 shadow-xl active:scale-95",
                             isScrolled
-                                ? "bg-primary text-white hover:bg-primary/90"
-                                : "bg-white text-primary hover:bg-gray-100"
+                                ? "bg-primary text-white hover:bg-accent hover:shadow-accent/20"
+                                : "bg-white text-primary hover:bg-accent hover:text-white hover:shadow-accent/40"
                         )}
                     >
-                        Book Now
+                        Plan My Trip
                     </Link>
                 </div>
 
                 {/* Mobile Menu Button */}
                 <button
-                    className="md:hidden p-2"
+                    className={cn(
+                        "lg:hidden p-2.5 rounded-2xl transition-colors",
+                        isScrolled ? "text-primary dark:text-white" : "text-white"
+                    )}
                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 >
                     {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
                 </button>
             </div>
 
-            {/* Mobile Menu Overlay */}
+            {/* Premium Mobile Menu Overlay */}
             <AnimatePresence>
                 {isMobileMenuOpen && (
                     <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: "auto" }}
-                        exit={{ opacity: 0, height: 0 }}
-                        className="md:hidden bg-white dark:bg-gray-900 text-gray-900 dark:text-white overflow-hidden"
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0.95 }}
+                        className="lg:hidden absolute top-full left-4 right-4 mt-4 bg-white dark:bg-primary rounded-[3rem] shadow-2xl border border-gray-100 dark:border-white/5 overflow-hidden"
                     >
-                        <div className="flex flex-col space-y-4 p-6">
+                        <div className="flex flex-col p-10 space-y-8">
                             {navLinks.map((link) => (
                                 <Link
                                     key={link.name}
                                     href={link.href}
-                                    className="text-lg font-medium hover:text-primary"
+                                    className="text-2xl font-black font-display text-primary dark:text-white hover:text-accent transition-colors"
                                     onClick={() => setIsMobileMenuOpen(false)}
                                 >
                                     {link.name}
                                 </Link>
                             ))}
-                            <hr className="border-gray-200 dark:border-gray-800" />
-                            <button
-                                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                                className="flex items-center space-x-2 font-medium"
-                            >
-                                {theme === "dark" ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-                                <span>Toggle Theme</span>
-                            </button>
-                            <Link href="/login" className="flex items-center space-x-2 font-medium" onClick={() => setIsMobileMenuOpen(false)}>
-                                <User className="w-5 h-5" />
-                                <span>Login / Sign Up</span>
-                            </Link>
+                            <div className="h-px bg-gray-100 dark:bg-white/5" />
+                            <div className="flex items-center justify-between">
+                                <button
+                                    onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                                    className="flex items-center gap-3 font-black text-[11px] uppercase tracking-[0.2em]"
+                                >
+                                    {theme === "dark" ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+                                    Switch Mode
+                                </button>
+                                <Link
+                                    href="/login"
+                                    className="px-8 py-4 bg-accent text-white rounded-2xl font-black text-[11px] uppercase tracking-[0.2em]"
+                                    onClick={() => setIsMobileMenuOpen(false)}
+                                >
+                                    Login
+                                </Link>
+                            </div>
                         </div>
                     </motion.div>
                 )}

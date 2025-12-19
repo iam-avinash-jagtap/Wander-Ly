@@ -1,12 +1,24 @@
-[00:00:03.080] Server  LOG      ✓ Ready in 2.3s
-[00:00:22.697] Server  LOG      ○ Compiling / ...
-[00:00:27.836] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:01:13.580] Browser WARN    Image with src "https://www.go2ladakh.in/app/webroot/js/ckfinder/userfiles/images/Landscape%20in%20Ladakh.jpg?utm_source=chatgpt.com" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:01:13.580] Browser WARN    Image with src "/images/himalayas.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:01:13.581] Browser WARN    Image with src "/images/kedarnath.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:01:13.581] Browser WARN    Image with src "/images/goa.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:01:43.491] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:01:44.140] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+[00:00:02.510] Server  LOG      ✓ Ready in 1822ms
+[00:00:25.538] Server  LOG      ○ Compiling / ...
+[00:00:29.802] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:33.444] Browser WARN    Image with src "https://www.go2ladakh.in/app/webroot/js/ckfinder/userfiles/images/Landscape%20in%20Ladakh.jpg?utm_source=chatgpt.com" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:33.444] Browser WARN    Image with src "/images/himalayas.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:33.444] Browser WARN    Image with src "/images/kedarnath.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:33.444] Browser WARN    Image with src "/images/goa.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:33.444] Browser WARN    Image with src "https://randomuser.me/api/portraits/men/32.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:33.444] Browser WARN    Image with src "https://randomuser.me/api/portraits/women/44.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:33.444] Browser WARN    Image with src "https://randomuser.me/api/portraits/men/46.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:33.444] Browser WARN    Image with src "https://randomuser.me/api/portraits/thumb/men/21.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:33.444] Browser WARN    Image with src "https://randomuser.me/api/portraits/thumb/men/22.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:33.444] Browser WARN    Image with src "https://randomuser.me/api/portraits/thumb/men/23.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:33.444] Browser WARN    Image with src "https://randomuser.me/api/portraits/thumb/men/24.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:03:12.662] Server  LOG      ✓ Compiled in 945ms
+[00:04:19.800] Server  LOG      ✓ Compiled in 363ms
+[00:06:23.611] Server  LOG      ✓ Compiled in 242ms
+[00:07:08.334] Server  LOG      ✓ Compiled in 447ms
+[00:09:07.099] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:09:09.795] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:09:10.336] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
 
 - A server/client branch `if (typeof window !== 'undefined')`.
 - Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
@@ -37,18 +49,251 @@ It can also happen if the client has a browser extension installed which messes 
                       <RootLayout>
                         <html lang="en" suppressHydrationWarning={true}>
                           <body
-+                           className="poppins_402b5cd-module__yrpiSG__variable inter_dc9473ec-module__UKqKMa__variabl..."
--                           className="poppins_402b5cd-module__yrpiSG__variable inter_dc9473ec-module__UKqKMa__variabl..."
+                            className="outfit_5cf5b5e7-module__sdc8_W__variable plus_jakarta_sans_4d3d6493-module__F0j..."
+-                           data-new-gr-c-s-check-loaded="14.1267.0"
+-                           data-gr-ext-installed=""
                           >
                   ...
 
-[00:01:44.140] Browser WARN    Image with src "https://www.go2ladakh.in/app/webroot/js/ckfinder/userfiles/images/Landscape%20in%20Ladakh.jpg?utm_source=chatgpt.com" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:01:44.140] Browser WARN    Image with src "/images/himalayas.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:01:44.140] Browser WARN    Image with src "/images/kedarnath.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:01:44.140] Browser WARN    Image with src "/images/goa.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:02:10.073] Server  LOG      ○ Compiling /sitemap ...
-[00:02:34.937] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:02:35.787] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+[00:09:10.336] Browser WARN    Image with src "https://www.go2ladakh.in/app/webroot/js/ckfinder/userfiles/images/Landscape%20in%20Ladakh.jpg?utm_source=chatgpt.com" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:09:10.336] Browser WARN    Image with src "/images/himalayas.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:09:10.336] Browser WARN    Image with src "/images/kedarnath.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:09:10.336] Browser WARN    Image with src "/images/goa.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:10:30.257] Server  LOG      ✓ Compiled in 430ms
+[00:10:49.315] Server  LOG      ✓ Compiled in 315ms
+[00:10:49.599] Browser ERROR   ./src/components/home/TravelCategories.tsx:91:31
+Parsing ecmascript source code failed
+  89 |                         >
+  90 |                             Explore by <span className="font-serif italic text-accent/80 font-medium">Boutique Categories</span>
+> 91 |                         </h2 >
+     |                               ^
+> 92 |                     </div>
+     | ^^^^^^^^^^^^^^^^^^^^^
+  93 |                     <motion.p
+  94 |                         initial={{ opacity: 0 }}
+  95 |                         whileInView={{ opacity: 1 }}
+
+Expected '</', got 'jsx text (
+                    )'
+
+Import traces:
+  Client Component Browser:
+    ./src/components/home/TravelCategories.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/home/TravelCategories.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+[00:11:35.606] Browser ERROR   ./src/components/home/TravelCategories.tsx:91:30
+Parsing ecmascript source code failed
+  89 |                         >
+  90 |                             Explore by <span className="font-serif italic text-accent/80 font-medium">Boutique Categories</span>
+> 91 |                         </h2>
+     |                              ^
+> 92 |                     </div>
+     | ^^^^^^^^^^^^^^^^^^^^^
+  93 |                     <motion.p
+  94 |                         initial={{ opacity: 0 }}
+  95 |                         whileInView={{ opacity: 1 }}
+
+Expected '</', got 'jsx text (
+                    )'
+
+Import traces:
+  Client Component Browser:
+    ./src/components/home/TravelCategories.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/home/TravelCategories.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+[00:12:07.909] Browser WARN    Image with src "https://randomuser.me/api/portraits/men/32.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:12:08.241] Browser WARN    Image with src "https://randomuser.me/api/portraits/women/44.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:12:09.001] Browser WARN    Image with src "https://randomuser.me/api/portraits/men/46.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:13:25.429] Server  LOG      ✓ Compiled in 1339ms
+[00:16:14.247] Server  LOG      ✓ Compiled in 260ms
+[00:18:37.395] Server  LOG      ✓ Compiled in 396ms
+[00:18:53.221] Server  LOG      ✓ Compiled in 553ms
+[00:19:29.595] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:19:36.355] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:19:36.811] Browser WARN    Image with src "https://www.go2ladakh.in/app/webroot/js/ckfinder/userfiles/images/Landscape%20in%20Ladakh.jpg?utm_source=chatgpt.com" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:19:36.811] Browser WARN    Image with src "/images/himalayas.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:19:36.811] Browser WARN    Image with src "/images/kedarnath.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:19:36.811] Browser WARN    Image with src "/images/goa.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:19:36.811] Browser WARN    Image with src "https://randomuser.me/api/portraits/men/32.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:19:36.811] Browser WARN    Image with src "https://randomuser.me/api/portraits/women/44.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:19:36.811] Browser WARN    Image with src "https://randomuser.me/api/portraits/men/46.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:19:42.806] Browser WARN    Image with src "https://randomuser.me/api/portraits/thumb/men/21.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:19:42.806] Browser WARN    Image with src "https://randomuser.me/api/portraits/thumb/men/22.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:19:42.806] Browser WARN    Image with src "https://randomuser.me/api/portraits/thumb/men/23.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:19:42.806] Browser WARN    Image with src "https://randomuser.me/api/portraits/thumb/men/24.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:21:15.469] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:21:15.879] Browser WARN    Image with src "https://www.go2ladakh.in/app/webroot/js/ckfinder/userfiles/images/Landscape%20in%20Ladakh.jpg?utm_source=chatgpt.com" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:21:15.879] Browser WARN    Image with src "https://www.go2ladakh.in/app/webroot/js/ckfinder/userfiles/images/Landscape%20in%20Ladakh.jpg?utm_source=chatgpt.com" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:21:15.879] Browser WARN    Image with src "https://darjeelingyatra.com/images/local-sightseeing/tiger-hill-500-400.webp?utm_source=chatgpt.com" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:21:15.879] Browser WARN    Image with src "/images/goa.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:21:15.879] Browser WARN    Image with src "/images/himalayas.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:21:15.879] Browser WARN    Image with src "/images/kerala.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:21:15.879] Browser WARN    Image with src "/images/rajasthan.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:21:19.172] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:21:20.025] Browser WARN    Image with src "https://www.go2ladakh.in/app/webroot/js/ckfinder/userfiles/images/Landscape%20in%20Ladakh.jpg?utm_source=chatgpt.com" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:21:20.026] Browser WARN    Image with src "/images/himalayas.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:21:20.026] Browser WARN    Image with src "/images/kedarnath.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:21:20.026] Browser WARN    Image with src "/images/goa.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:21:20.026] Browser WARN    Image with src "https://randomuser.me/api/portraits/men/32.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:21:20.026] Browser WARN    Image with src "https://randomuser.me/api/portraits/women/44.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:21:20.026] Browser WARN    Image with src "https://randomuser.me/api/portraits/men/46.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:21:20.026] Browser WARN    Image with src "https://randomuser.me/api/portraits/thumb/men/21.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:21:20.026] Browser WARN    Image with src "https://randomuser.me/api/portraits/thumb/men/22.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:21:20.026] Browser WARN    Image with src "https://randomuser.me/api/portraits/thumb/men/23.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:21:20.026] Browser WARN    Image with src "https://randomuser.me/api/portraits/thumb/men/24.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:22:20.834] Server  LOG      ✓ Compiled in 532ms
+[00:22:46.177] Browser WARN    Image with src "https://darjeelingyatra.com/images/local-sightseeing/tiger-hill-500-400.webp?utm_source=chatgpt.com" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:22:46.177] Browser WARN    Image with src "/images/rajasthan.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:22:46.177] Browser WARN    Image with src "/images/kerala.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:22:58.349] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:22:58.698] Browser WARN    Image with src "https://www.go2ladakh.in/app/webroot/js/ckfinder/userfiles/images/Landscape%20in%20Ladakh.jpg?utm_source=chatgpt.com" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:22:58.698] Browser WARN    Image with src "https://www.go2ladakh.in/app/webroot/js/ckfinder/userfiles/images/Landscape%20in%20Ladakh.jpg?utm_source=chatgpt.com" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:22:58.698] Browser WARN    Image with src "https://darjeelingyatra.com/images/local-sightseeing/tiger-hill-500-400.webp?utm_source=chatgpt.com" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:22:58.698] Browser WARN    Image with src "/images/goa.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:22:58.698] Browser WARN    Image with src "/images/himalayas.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:22:58.698] Browser WARN    Image with src "/images/kerala.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:22:58.698] Browser WARN    Image with src "/images/rajasthan.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:23:46.477] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:23:47.015] Browser WARN    Image with src "https://www.go2ladakh.in/app/webroot/js/ckfinder/userfiles/images/Landscape%20in%20Ladakh.jpg?utm_source=chatgpt.com" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:23:47.015] Browser WARN    Image with src "/images/himalayas.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:23:47.015] Browser WARN    Image with src "/images/kedarnath.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:23:47.016] Browser WARN    Image with src "/images/goa.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:23:58.318] Server  LOG      ○ Compiling /book ...
+[00:24:45.763] Browser WARN    Image with src "https://randomuser.me/api/portraits/men/32.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:24:45.763] Browser WARN    Image with src "https://randomuser.me/api/portraits/women/44.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:24:52.551] Browser WARN    Image with src "https://randomuser.me/api/portraits/men/46.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:24:53.719] Browser WARN    Image with src "https://randomuser.me/api/portraits/thumb/men/21.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:24:53.719] Browser WARN    Image with src "https://randomuser.me/api/portraits/thumb/men/22.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:24:53.719] Browser WARN    Image with src "https://randomuser.me/api/portraits/thumb/men/23.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:24:53.719] Browser WARN    Image with src "https://randomuser.me/api/portraits/thumb/men/24.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:24:56.115] Browser WARN    Image with src "https://darjeelingyatra.com/images/local-sightseeing/tiger-hill-500-400.webp?utm_source=chatgpt.com" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:24:56.115] Browser WARN    Image with src "/images/kerala.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:24:56.115] Browser WARN    Image with src "/images/rajasthan.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:25:33.398] Server  LOG      ✓ Compiled in 408ms
+[00:25:42.555] Browser ERROR   uncaughtError: ReferenceError: ChevronDown is not defined
+[00:26:21.730] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:26:21.734] Server  LOG      ✓ Compiled in 144ms
+[00:26:23.166] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:26:23.857] Browser WARN    Image with src "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2021&auto=format&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:26:23.857] Browser WARN    Image with src "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2021&auto=format&fit=crop" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:26:39.981] Server  LOG      ✓ Compiled in 143ms
+[00:26:45.808] Browser WARN    Image with src "https://www.go2ladakh.in/app/webroot/js/ckfinder/userfiles/images/Landscape%20in%20Ladakh.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:28:59.381] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:28:59.949] Browser WARN    Image with src "https://www.go2ladakh.in/app/webroot/js/ckfinder/userfiles/images/Landscape%20in%20Ladakh.jpg?utm_source=chatgpt.com" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:28:59.949] Browser WARN    Image with src "/images/himalayas.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:28:59.949] Browser WARN    Image with src "/images/kedarnath.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:28:59.949] Browser WARN    Image with src "/images/goa.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:29:04.602] Browser WARN    Image with src "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2021&auto=format&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:29:23.367] Browser WARN    Image with src "https://randomuser.me/api/portraits/men/32.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:29:23.367] Browser WARN    Image with src "https://randomuser.me/api/portraits/women/44.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:29:23.367] Browser WARN    Image with src "https://randomuser.me/api/portraits/men/46.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:30:02.646] Server  LOG      ✓ Compiled in 266ms
+[00:33:07.470] Server  LOG      ✓ Compiled in 348ms
+[00:35:49.397] Server  LOG      ✓ Compiled in 419ms
+[00:44:49.695] Server  LOG      ✓ Compiled in 2.1s
+[00:44:51.269] Browser WARN    Image with src "https://randomuser.me/api/portraits/thumb/men/21.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:44:51.269] Browser WARN    Image with src "https://randomuser.me/api/portraits/thumb/men/22.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:44:51.269] Browser WARN    Image with src "https://randomuser.me/api/portraits/thumb/men/23.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:44:51.269] Browser WARN    Image with src "https://randomuser.me/api/portraits/thumb/men/24.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:45:45.024] Server  LOG      ✓ Compiled in 218ms
+[00:45:45.913] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:45:53.658] Browser WARN    Image with src "https://www.go2ladakh.in/app/webroot/js/ckfinder/userfiles/images/Landscape%20in%20Ladakh.jpg?utm_source=chatgpt.com" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:45:53.658] Browser WARN    Image with src "/images/himalayas.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:45:53.658] Browser WARN    Image with src "/images/kedarnath.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:45:53.658] Browser WARN    Image with src "/images/goa.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:45:57.375] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:45:57.941] Browser WARN    Image with src "https://www.go2ladakh.in/app/webroot/js/ckfinder/userfiles/images/Landscape%20in%20Ladakh.jpg?utm_source=chatgpt.com" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:45:57.941] Browser WARN    Image with src "/images/himalayas.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:45:57.941] Browser WARN    Image with src "/images/kedarnath.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:45:57.941] Browser WARN    Image with src "/images/goa.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:46:00.778] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:47:18.392] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:47:19.600] Browser WARN    Image with src "https://www.go2ladakh.in/app/webroot/js/ckfinder/userfiles/images/Landscape%20in%20Ladakh.jpg?utm_source=chatgpt.com" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:47:19.600] Browser WARN    Image with src "/images/himalayas.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:47:19.600] Browser WARN    Image with src "/images/kedarnath.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:47:19.600] Browser WARN    Image with src "/images/goa.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:47:25.876] Server  LOG      ○ Compiling /packages/kedarnath ...
+[00:47:32.013] Browser WARN    Image with src "https://upload.wikimedia.org/wikipedia/commons/5/56/Kedarnath_Temple_in_Rainy_season.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:47:32.013] Browser WARN    Image with src "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Badrinath_Temple_%2C_Uttarakhand.jpg/1200px-Badrinath_Temple_%2C_Uttarakhand.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:47:32.013] Browser WARN    Image with src "https://uttarakhandtourism.gov.in/assets/media/UTDB_media_1746518171First-Indian-Village-Mana.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:47:32.013] Browser WARN    Image with src "https://upload.wikimedia.org/wikipedia/commons/6/6d/Dhauliganga_at_Vishnuprayag.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:47:32.013] Browser WARN    Image with src "https://www.sacredyatra.com/wp-content/uploads/2018/04/Kedarnath-Trek-Route-Map.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:51:20.320] Server  LOG      ✓ Compiled in 135ms
+[00:51:20.603] Browser ERROR   ./src/app/book/page.tsx:406:18
+Parsing ecmascript source code failed
+  404 |             </div>
+  405 |         </div>
+> 406 |                 </div >
+      |                  ^^^^^^
+  407 |
+  408 |             </div >
+  409 |
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./src/app/book/page.tsx [Client Component Browser]
+    ./src/app/book/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/book/page.tsx [Client Component SSR]
+    ./src/app/book/page.tsx [Server Component]
+[00:54:31.573] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:54:31.835] Browser ERROR   ./src/app/book/page.tsx:406:18
+Parsing ecmascript source code failed
+  404 |             </div>
+  405 |         </div>
+> 406 |                 </div >
+      |                  ^^^^^^
+  407 |
+  408 |             </div >
+  409 |
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./src/app/book/page.tsx [Client Component Browser]
+    ./src/app/book/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/book/page.tsx [Client Component SSR]
+    ./src/app/book/page.tsx [Server Component]
+[00:54:31.835] Browser ERROR   ./src/app/book/page.tsx:406:18
+Parsing ecmascript source code failed
+  404 |             </div>
+  405 |         </div>
+> 406 |                 </div >
+      |                  ^^^^^^
+  407 |
+  408 |             </div >
+  409 |
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./src/app/book/page.tsx [Client Component Browser]
+    ./src/app/book/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/book/page.tsx [Client Component SSR]
+    ./src/app/book/page.tsx [Server Component]
+[00:54:32.301] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
 
 - A server/client branch `if (typeof window !== 'undefined')`.
 - Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
@@ -79,12 +324,237 @@ It can also happen if the client has a browser extension installed which messes 
                       <RootLayout>
                         <html lang="en" suppressHydrationWarning={true}>
                           <body
-+                           className="poppins_402b5cd-module__yrpiSG__variable inter_dc9473ec-module__UKqKMa__variabl..."
--                           className="poppins_402b5cd-module__yrpiSG__variable inter_dc9473ec-module__UKqKMa__variabl..."
+                            className="outfit_5cf5b5e7-module__sdc8_W__variable plus_jakarta_sans_4d3d6493-module__F0j..."
+-                           data-new-gr-c-s-check-loaded="14.1267.0"
+-                           data-gr-ext-installed=""
                           >
                   ...
 
-[00:02:35.787] Browser WARN    Image with src "https://www.go2ladakh.in/app/webroot/js/ckfinder/userfiles/images/Landscape%20in%20Ladakh.jpg?utm_source=chatgpt.com" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:02:35.787] Browser WARN    Image with src "/images/himalayas.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:02:35.787] Browser WARN    Image with src "/images/kedarnath.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:02:35.787] Browser WARN    Image with src "/images/goa.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:54:32.301] Browser WARN    Image with src "https://www.go2ladakh.in/app/webroot/js/ckfinder/userfiles/images/Landscape%20in%20Ladakh.jpg?utm_source=chatgpt.com" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:54:32.301] Browser WARN    Image with src "/images/himalayas.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:54:32.301] Browser WARN    Image with src "/images/kedarnath.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:54:32.301] Browser WARN    Image with src "/images/goa.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:54:53.373] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:54:53.524] Browser ERROR   ./src/app/book/page.tsx:406:18
+Parsing ecmascript source code failed
+  404 |             </div>
+  405 |         </div>
+> 406 |                 </div >
+      |                  ^^^^^^
+  407 |
+  408 |             </div >
+  409 |
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./src/app/book/page.tsx [Client Component Browser]
+    ./src/app/book/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/book/page.tsx [Client Component SSR]
+    ./src/app/book/page.tsx [Server Component]
+[00:54:53.685] Browser ERROR   ./src/app/book/page.tsx:406:18
+Parsing ecmascript source code failed
+  404 |             </div>
+  405 |         </div>
+> 406 |                 </div >
+      |                  ^^^^^^
+  407 |
+  408 |             </div >
+  409 |
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./src/app/book/page.tsx [Client Component Browser]
+    ./src/app/book/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/book/page.tsx [Client Component SSR]
+    ./src/app/book/page.tsx [Server Component]
+[00:54:54.035] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="en" suppressHydrationWarning={true}>
+                          <body
+                            className="outfit_5cf5b5e7-module__sdc8_W__variable plus_jakarta_sans_4d3d6493-module__F0j..."
+-                           data-new-gr-c-s-check-loaded="14.1267.0"
+-                           data-gr-ext-installed=""
+-                           style={{padding-right:"15px",overflow-x:"hidden",overflow-y:"hidden"}}
+                          >
+                  ...
+
+[00:54:54.035] Browser WARN    Image with src "https://www.go2ladakh.in/app/webroot/js/ckfinder/userfiles/images/Landscape%20in%20Ladakh.jpg?utm_source=chatgpt.com" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:54:54.035] Browser WARN    Image with src "/images/himalayas.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:54:54.035] Browser WARN    Image with src "/images/kedarnath.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:54:54.035] Browser WARN    Image with src "/images/goa.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:55:07.596] Browser ERROR   ./src/app/book/page.tsx:407:9
+Parsing ecmascript source code failed
+  405 |         </div>
+  406 |
+> 407 |         {/* Success Modal - Premium Edit */ }
+      |         ^
+  408 |     <AnimatePresence>
+  409 |         {
+  410 |             showSuccess && (
+
+Expected ',', got '{'
+
+Import traces:
+  Client Component Browser:
+    ./src/app/book/page.tsx [Client Component Browser]
+    ./src/app/book/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/book/page.tsx [Client Component SSR]
+    ./src/app/book/page.tsx [Server Component]
+[00:55:27.600] Browser ERROR   ./src/app/book/page.tsx:407:9
+Parsing ecmascript source code failed
+  405 |         </div>
+  406 |
+> 407 |         {/* Success Modal - Premium Edit */ }
+      |         ^
+  408 |     <AnimatePresence>
+  409 |         {
+  410 |             showSuccess && (
+
+Expected ',', got '{'
+
+Import traces:
+  Client Component Browser:
+    ./src/app/book/page.tsx [Client Component Browser]
+    ./src/app/book/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/book/page.tsx [Client Component SSR]
+    ./src/app/book/page.tsx [Server Component]
+[00:55:54.728] Server  LOG      ✓ Compiled in 105ms
+[00:56:33.601] Browser WARN    Image with src "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2021&auto=format&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:57:41.730] Server  LOG      ✓ Compiled in 333ms
+[00:57:56.875] Server  LOG      ✓ Compiled in 153ms
+[00:58:34.590] Server  LOG      ✓ Compiled in 191ms
+[00:58:49.945] Server  LOG      ✓ Compiled in 151ms
+[00:59:05.027] Server  LOG      ✓ Compiled in 440ms
+[00:59:17.557] Server  ERROR    ⨯ "upstream image response failed for" "https://www.darjeeling-tourism.com/darj/0002598c.jpg" 404
+[00:59:36.316] Server  LOG      ✓ Compiled in 240ms
+[00:59:52.997] Server  ERROR    ⨯ "upstream image response failed for" "https://www.darjeeling-tourism.com/darj/0002598c.jpg" 404
+[01:00:41.241] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:00:41.785] Browser WARN    Image with src "https://www.go2ladakh.in/app/webroot/js/ckfinder/userfiles/images/Landscape%20in%20Ladakh.jpg?utm_source=chatgpt.com" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:00:41.785] Browser WARN    Image with src "/images/himalayas.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:00:41.785] Browser WARN    Image with src "/images/kedarnath.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:00:41.785] Browser WARN    Image with src "/images/goa.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:00:53.747] Server  LOG      ✓ Compiled in 832ms
+[01:01:02.894] Browser WARN    Image with src "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2021&auto=format&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:01:08.631] Browser WARN    Image with src "https://voyagersadventure.com/wp-content/uploads/2025/01/Manali-summer-trek-2-scaled-e1741326438267.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:01:44.632] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:01:45.604] Browser WARN    Image with src "https://www.go2ladakh.in/app/webroot/js/ckfinder/userfiles/images/Landscape%20in%20Ladakh.jpg?utm_source=chatgpt.com" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:01:45.604] Browser WARN    Image with src "/images/himalayas.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:01:45.604] Browser WARN    Image with src "/images/kedarnath.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:01:45.604] Browser WARN    Image with src "/images/goa.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:01:53.312] Browser WARN    Image with src "https://randomuser.me/api/portraits/men/32.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:01:53.718] Browser WARN    Image with src "https://randomuser.me/api/portraits/women/44.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:01:56.241] Browser WARN    Image with src "https://randomuser.me/api/portraits/men/46.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:01:57.424] Browser WARN    Image with src "https://randomuser.me/api/portraits/thumb/men/21.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:01:57.424] Browser WARN    Image with src "https://randomuser.me/api/portraits/thumb/men/24.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:01:57.424] Browser WARN    Image with src "https://randomuser.me/api/portraits/thumb/men/22.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:01:57.424] Browser WARN    Image with src "https://randomuser.me/api/portraits/thumb/men/23.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:04:32.736] Server  LOG      ✓ Compiled in 386ms
+[01:04:37.608] Browser WARN    Image with src "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1974&auto=format&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:04:37.608] Browser WARN    Image with src "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=1974&auto=format&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:04:37.608] Browser WARN    Image with src "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1974&auto=format&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:05:58.763] Server  LOG      ✓ Compiled in 222ms
+[01:18:30.675] Server  ERROR   D:\TripMitraAj\src\frontend\.next\dev\server\chunks\ssr\[root-of-the-server]__df78b22a._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[01:18:30.684] Server  ERROR    ⨯ ReferenceError: outfit is not defined
+[01:18:30.790] Server  ERROR   D:\TripMitraAj\src\frontend\.next\dev\server\chunks\ssr\[root-of-the-server]__df78b22a._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[01:18:30.792] Server  ERROR    ⨯ ReferenceError: outfit is not defined
+[01:18:31.149] Server  ERROR   D:\TripMitraAj\src\frontend\.next\dev\server\chunks\ssr\[root-of-the-server]__df78b22a._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[01:18:31.151] Server  ERROR    ⨯ ReferenceError: outfit is not defined
+[01:18:31.658] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:18:32.605] Browser ERROR   uncaughtError: ReferenceError: outfit is not defined
+[01:18:38.735] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:18:45.664] Server  LOG      ✓ Compiled in 367ms
+[01:18:56.873] Server  LOG      ✓ Compiled in 269ms
+[01:19:15.100] Browser WARN    Image with src "https://www.go2ladakh.in/app/webroot/js/ckfinder/userfiles/images/Landscape%20in%20Ladakh.jpg?utm_source=chatgpt.com" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:19:15.100] Browser WARN    Image with src "/images/himalayas.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:19:15.100] Browser WARN    Image with src "/images/kedarnath.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:19:15.100] Browser WARN    Image with src "/images/goa.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:19:15.278] Browser WARN    Image with src "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1974&auto=format&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:19:15.466] Browser WARN    Image with src "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1974&auto=format&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:19:15.466] Browser WARN    Image with src "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=1974&auto=format&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:19:15.466] Browser WARN    Image with src "https://randomuser.me/api/portraits/thumb/men/21.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:19:15.466] Browser WARN    Image with src "https://randomuser.me/api/portraits/thumb/men/22.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:19:15.466] Browser WARN    Image with src "https://randomuser.me/api/portraits/thumb/men/23.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:19:15.466] Browser WARN    Image with src "https://randomuser.me/api/portraits/thumb/men/24.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:19:16.543] Server  LOG      ✓ Compiled in 431ms
+[01:19:31.574] Server  LOG      ✓ Compiled in 444ms
+[01:19:38.839] Server  LOG      ✓ Compiled in 352ms
+[01:20:03.256] Server  LOG      ✓ Compiled in 656ms
+[01:21:01.643] Server  LOG      ✓ Compiled in 175ms
+[01:21:39.313] Server  LOG      ✓ Compiled in 478ms
+[01:21:51.016] Browser WARN    Image with src "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2021&auto=format&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:22:00.439] Server  LOG      ✓ Compiled in 297ms
+[01:22:29.110] Server  LOG      ✓ Compiled in 227ms
+[01:22:38.760] Server  LOG      ✓ Compiled in 263ms
+[01:23:05.067] Server  LOG      ✓ Compiled in 210ms
+[01:23:35.470] Server  LOG      ✓ Compiled in 207ms
+[01:24:23.256] Browser WARN    Image with src "https://i0.wp.com/weekendyaari.in/wp-content/uploads/2024/10/mall-road-manali-scaled.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:24:23.256] Browser WARN    Image with src "https://s7ap1.scene7.com/is/image/incredibleindia/cityscape-of-shimla-himachal-pradesh-city-1-hero" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:24:23.256] Browser WARN    Image with src "https://indiano.travel/wp-content/uploads/2022/07/The-Mall-Road-is-a-main-pedestrian-street-in-Shimla-town.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:24:23.398] Browser WARN    Image with src "https://upload.wikimedia.org/wikipedia/commons/0/03/Manali_City.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:24:23.398] Browser WARN    Image with src "https://himachaltourstravel.com/wp-content/uploads/2023/01/solang-valley-1.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:25:42.988] Server  LOG      ✓ Compiled in 342ms
+[01:26:24.064] Server  LOG      ✓ Compiled in 374ms
+[01:27:03.115] Server  LOG      ✓ Compiled in 255ms
+[01:27:07.800] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:27:08.341] Browser WARN    Image with src "https://www.go2ladakh.in/app/webroot/js/ckfinder/userfiles/images/Landscape%20in%20Ladakh.jpg?utm_source=chatgpt.com" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:27:08.341] Browser WARN    Image with src "/images/himalayas.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:27:08.341] Browser WARN    Image with src "/images/kedarnath.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:27:08.341] Browser WARN    Image with src "/images/goa.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:27:20.637] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:27:21.779] Server  LOG      ✓ Compiled in 351ms
+[01:27:22.587] Browser WARN    Image with src "https://www.go2ladakh.in/app/webroot/js/ckfinder/userfiles/images/Landscape%20in%20Ladakh.jpg?utm_source=chatgpt.com" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:27:22.587] Browser WARN    Image with src "/images/himalayas.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:27:22.587] Browser WARN    Image with src "/images/goa.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:27:22.587] Browser WARN    Image with src "/images/kedarnath.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:28:10.123] Server  LOG      ✓ Compiled in 735ms
+[01:28:25.572] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:28:26.000] Browser WARN    Image with src "https://www.go2ladakh.in/app/webroot/js/ckfinder/userfiles/images/Landscape%20in%20Ladakh.jpg?utm_source=chatgpt.com" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:28:26.000] Browser WARN    Image with src "/images/himalayas.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:28:26.000] Browser WARN    Image with src "/images/kedarnath.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:28:26.000] Browser WARN    Image with src "/images/goa.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:28:36.558] Browser WARN    Image with src "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1974&auto=format&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:28:36.558] Browser WARN    Image with src "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1974&auto=format&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:28:36.922] Browser WARN    Image with src "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=1974&auto=format&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:28:52.328] Browser WARN    Image with src "https://randomuser.me/api/portraits/thumb/men/21.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:28:52.328] Browser WARN    Image with src "https://randomuser.me/api/portraits/thumb/men/22.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:28:52.328] Browser WARN    Image with src "https://randomuser.me/api/portraits/thumb/men/23.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:28:52.328] Browser WARN    Image with src "https://randomuser.me/api/portraits/thumb/men/24.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes

@@ -167,7 +167,7 @@ export default function BlogPage() {
                                             <Clock className="w-3 h-3" /> {post.readTime}
                                         </div>
                                     </div>
-                                    <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors leading-tight">
+                                    <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-teal-600 transition-colors leading-tight">
                                         {post.title}
                                     </h3>
                                     <p className="text-gray-600 line-clamp-3 mb-6">
@@ -178,9 +178,9 @@ export default function BlogPage() {
                                             <div className="w-8 h-8 bg-gray-200 rounded-full overflow-hidden relative">
                                                 <Image src="https://media.flytographer.com/uploads/2023/06/How-it-works-Flytographer-photographer-001.jpg" alt="Author" fill className="object-cover" />
                                             </div>
-                                            <span className="text-sm font-bold text-gray-700">Team TripMitra</span>
+                                            <span className="text-sm font-bold text-gray-700">Team Wanderly</span>
                                         </div>
-                                        <span className="p-2 bg-gray-50 rounded-full text-gray-400 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                                        <span className="p-2 bg-gray-50 rounded-full text-gray-400 group-hover:bg-teal-600 group-hover:text-white transition-all">
                                             <ArrowRight className="w-4 h-4" />
                                         </span>
                                     </div>

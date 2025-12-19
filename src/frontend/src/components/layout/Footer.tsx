@@ -10,16 +10,16 @@ export function Footer() {
                     {/* Brand Column */}
                     <div>
                         <Link href="/" className="inline-block mb-6 group">
-                            <div className="flex items-baseline gap-0.5">
-                                <span className="text-3xl font-black font-display tracking-tight text-white">
-                                    Trip<span className="text-blue-500">Mitra</span>
+                            <div className="flex items-center gap-1">
+                                <span className="text-2xl font-black font-display tracking-[0.2em] text-white uppercase">
+                                    Wanderly
                                 </span>
-                                <span className="text-3xl font-black font-display text-yellow-500">Aj</span>
+                                <div className="w-1.5 h-1.5 rounded-full bg-accent"></div>
                             </div>
                         </Link>
                         <p className="text-gray-400 mb-6 leading-relaxed">
-                            Discover the soul of India with premium travel experiences.
-                            From the Himalayas to Kerala, we curate journeys that inspire.
+                            Boutique, premium travel and experience booking platform for the modern explorer.
+                            Global journeys, local insights.
                         </p>
                         <div className="flex space-x-4">
                             <SocialLink href={footerLinks.brand.github} icon={<Github className="w-5 h-5" />} />
@@ -68,7 +68,7 @@ export function Footer() {
                 </div>
 
                 <div className="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
-                    <p>&copy; {new Date().getFullYear()} TripMitraAj. All rights reserved.</p>
+                    <p>&copy; {new Date().getFullYear()} WANDERLY. All rights reserved.</p>
                 </div>
             </div>
         </footer>

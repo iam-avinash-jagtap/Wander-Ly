@@ -19,13 +19,13 @@ export default function LoginPage() {
         setTimeout(() => {
             // Mock successful login
             const userData = {
-                name: "Traveler", // You could get this from an input field if you wanted to be more realistic
-                email: "traveler@tripmitra.com",
+                name: "Traveler",
+                email: "traveler@wanderly.com",
                 isLoggedIn: true
             };
 
             // Save to localStorage
-            localStorage.setItem('tripMitraUser', JSON.stringify(userData));
+            localStorage.setItem('wanderlyUser', JSON.stringify(userData));
 
             // Redirect to Home
             window.location.href = '/';
@@ -37,15 +37,29 @@ export default function LoginPage() {
             <Navbar />
 
             {/* Background Elements */}
-            <div className="absolute top-0 right-0 w-[50vw] h-full bg-blue-600 hidden lg:block skew-x-[-10deg] translate-x-20 z-0"></div>
+            <div className="absolute top-0 right-0 w-[55vw] h-full bg-primary hidden lg:block skew-x-[-6deg] translate-x-32 z-0"></div>
             <div className="absolute top-0 right-0 w-full h-full lg:w-1/2 lg:h-full z-0 pointer-events-none">
                 <img
-                    src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2073&q=80"
-                    alt="Login Background"
-                    className="w-full h-full object-cover opacity-20 lg:opacity-100"
+                    src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+                    alt="Boutique Discovery"
+                    className="w-full h-full object-cover opacity-25 lg:opacity-100 contrast-125"
                 />
-                <div className="absolute inset-0 bg-blue-600/20 lg:bg-blue-600/40 mix-blend-multiply"></div>
+                <div className="absolute inset-0 bg-primary/40 mix-blend-multiply"></div>
                 <div className="absolute inset-0 bg-gradient-to-r from-white via-transparent to-transparent lg:hidden"></div>
+
+                {/* Desktop Quote */}
+                <div className="absolute bottom-20 left-20 right-20 hidden lg:block">
+                    <motion.div
+                        initial={{ opacity: 0, x: 20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0.5, duration: 1 }}
+                    >
+                        <p className="text-white/60 text-sm font-black uppercase tracking-[0.3em] mb-4">Wanderly Collection</p>
+                        <h2 className="text-4xl text-white font-serif italic leading-tight">
+                            "To travel is to discover that everyone is wrong about other countries."
+                        </h2>
+                    </motion.div>
+                </div>
             </div>
 
             <div className="container mx-auto px-4 h-screen flex items-center relative z-10">
@@ -55,15 +69,15 @@ export default function LoginPage() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
                     >
-                        <div className="mb-8">
-                            <span className="inline-block px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs font-bold uppercase tracking-wider mb-4 border border-blue-100">
-                                Welcome Back
+                        <div className="mb-10">
+                            <span className="inline-block px-4 py-1.5 bg-teal-50 text-teal-700 rounded-full text-[10px] font-black uppercase tracking-widest mb-6 border border-teal-100/50">
+                                Global Explorer Login
                             </span>
-                            <h1 className="text-4xl md:text-6xl font-black text-gray-900 mb-4 tracking-tight">
-                                Plan Your Next <br /> <span className="text-blue-600">Great Escape.</span>
+                            <h1 className="text-5xl md:text-7xl font-black text-gray-900 mb-6 tracking-tighter font-display leading-[0.9]">
+                                The Art of <br /> <span className="text-teal-600">Discovery.</span>
                             </h1>
-                            <p className="text-lg text-gray-500 max-w-md">
-                                Sign in to access your exclusive deals, saved itineraries, and booking history.
+                            <p className="text-lg text-gray-500 max-w-md font-medium italic">
+                                Sign in to access your curated journeys, boutique itineraries, and exclusive global experiences.
                             </p>
                         </div>
 
@@ -72,14 +86,14 @@ export default function LoginPage() {
                                 <div className="group">
                                     <label htmlFor="email" className="block text-sm font-bold text-gray-700 mb-2 ml-1">Email Address</label>
                                     <div className="relative">
-                                        <Mail className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400 group-focus-within:text-blue-600 transition-colors" />
+                                        <Mail className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400 group-focus-within:text-teal-600 transition-colors" />
                                         <input
                                             id="email"
                                             name="email"
                                             type="email"
                                             required
                                             placeholder="you@example.com"
-                                            className="w-full pl-12 pr-4 py-4 bg-gray-50 border border-gray-200 rounded-2xl focus:bg-white focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 outline-none transition-all font-medium text-gray-900 placeholder-gray-400"
+                                            className="w-full pl-12 pr-4 py-4 bg-gray-50 border border-gray-200 rounded-2xl focus:bg-white focus:ring-4 focus:ring-teal-500/10 focus:border-teal-500 outline-none transition-all font-medium text-gray-900 placeholder-gray-400"
                                         />
                                     </div>
                                 </div>
@@ -87,14 +101,14 @@ export default function LoginPage() {
                                 <div className="group">
                                     <label htmlFor="password" className="block text-sm font-bold text-gray-700 mb-2 ml-1">Password</label>
                                     <div className="relative">
-                                        <Lock className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400 group-focus-within:text-blue-600 transition-colors" />
+                                        <Lock className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400 group-focus-within:text-teal-600 transition-colors" />
                                         <input
                                             id="password"
                                             name="password"
                                             type={showPassword ? "text" : "password"}
                                             required
                                             placeholder="••••••••"
-                                            className="w-full pl-12 pr-12 py-4 bg-gray-50 border border-gray-200 rounded-2xl focus:bg-white focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 outline-none transition-all font-medium text-gray-900 placeholder-gray-400"
+                                            className="w-full pl-12 pr-12 py-4 bg-gray-50 border border-gray-200 rounded-2xl focus:bg-white focus:ring-4 focus:ring-teal-500/10 focus:border-teal-500 outline-none transition-all font-medium text-gray-900 placeholder-gray-400"
                                         />
                                         <button
                                             type="button"
@@ -109,16 +123,16 @@ export default function LoginPage() {
 
                             <div className="flex items-center justify-between text-sm">
                                 <label className="flex items-center space-x-2 cursor-pointer">
-                                    <input type="checkbox" className="w-4 h-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500" />
+                                    <input type="checkbox" className="w-4 h-4 rounded border-gray-300 text-teal-600 focus:ring-teal-500" />
                                     <span className="text-gray-600 font-medium">Remember me</span>
                                 </label>
-                                <a href="#" className="font-bold text-blue-600 hover:text-blue-700 hover:underline">Forgot password?</a>
+                                <a href="#" className="font-bold text-teal-600 hover:text-teal-700 hover:underline">Forgot password?</a>
                             </div>
 
                             <button
                                 type="submit"
                                 disabled={isLoading}
-                                className="w-full flex items-center justify-center py-4 bg-gray-900 hover:bg-black text-white rounded-2xl font-bold text-lg shadow-xl shadow-gray-900/20 transform transition-all hover:scale-[1.02] active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed"
+                                className="w-full flex items-center justify-center py-5 bg-gray-900 hover:bg-teal-600 text-white rounded-2xl font-black text-xs uppercase tracking-[0.2em] shadow-2xl shadow-gray-900/20 transform transition-all hover:scale-[1.02] active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed"
                             >
                                 {isLoading ? (
                                     <span className="flex items-center">
@@ -137,7 +151,7 @@ export default function LoginPage() {
                         <div className="mt-8 text-center">
                             <p className="text-gray-500">
                                 Don't have an account? {' '}
-                                <a href="#" className="font-bold text-blue-600 hover:underline">
+                                <a href="#" className="font-bold text-teal-600 hover:underline">
                                     Create one for free
                                 </a>
                             </p>

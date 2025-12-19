@@ -36,7 +36,7 @@ export default function PartnershipPage() {
                             Partnering with <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Excellence</span>
                         </h1>
                         <p className="text-xl text-gray-300 max-w-3xl mx-auto font-light leading-relaxed mb-10">
-                            TripMitra is proud to announce our exclusive strategic partnership with <strong>BMW India</strong>.
+                            Wanderly is proud to announce our exclusive strategic partnership with <strong>BMW India</strong>.
                             Together, we are redefining luxury travel experiences.
                         </p>
 
@@ -79,7 +79,7 @@ export default function PartnershipPage() {
                         >
                             <h2 className="text-4xl font-bold text-gray-900 font-display">Drive the Extraordinary.</h2>
                             <p className="text-lg text-gray-600 leading-relaxed">
-                                This partnership brings the sheer driving pleasure of BMW to your TripMitra journeys.
+                                This partnership brings the sheer driving pleasure of BMW to your Wanderly journeys.
                                 Select premium packages now include optional <strong>BMW X-Series transfers</strong>
                                 for airport pickups and inter-city travel, ensuring your adventure begins the moment
                                 you step out of your door.
@@ -134,7 +134,7 @@ export default function PartnershipPage() {
                     <div className="flex flex-col items-center mb-16">
                         <Handshake className="w-16 h-16 text-blue-400 mb-6" />
                         <h2 className="text-4xl md:text-5xl font-bold font-display text-center mb-4">Official Partnership Contract</h2>
-                        <p className="text-gray-400 text-center max-w-2xl">This agreement solidifies the strategic alliance between TripMitra and BMW India, committed to delivering unparalleled travel experiences.</p>
+                        <p className="text-gray-400 text-center max-w-2xl">This agreement solidifies the strategic alliance between Wanderly and BMW India, committed to delivering unparalleled travel experiences.</p>
                     </div>
 
                     <div className="max-w-4xl mx-auto bg-white text-gray-900 rounded-lg shadow-2xl overflow-hidden relative">
@@ -145,7 +145,7 @@ export default function PartnershipPage() {
                         <div className="p-12 border-b-2 border-gray-100 flex justify-between items-start relative z-10">
                             <div>
                                 <h3 className="text-2xl font-serif font-black text-gray-900 uppercase tracking-widest mb-1">Memorandum of Understanding</h3>
-                                <p className="text-gray-500 text-sm font-mono">REF: TM-BMW-2025-XA</p>
+                                <p className="font-mono text-gray-500 text-sm">REF: WNDR-BMW-2025-XA</p>
                             </div>
                             <div className="text-right">
                                 <div className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">Effective Date</div>
@@ -156,13 +156,13 @@ export default function PartnershipPage() {
                         {/* Contract Body */}
                         <div className="p-12 space-y-8 font-serif text-lg leading-relaxed text-gray-800 relative z-10">
                             <p>
-                                <span className="font-bold">THIS AGREEMENT</span> is made and entered into by and between <span className="font-bold border-b border-gray-300">TripMitra Travels Pvt Ltd.</span> ("Company") and <span className="font-bold border-b border-gray-300">BMW India Private Limited</span> ("Partner").
+                                <span className="font-bold">THIS AGREEMENT</span> is made and entered into by and between <span className="font-bold border-b border-gray-300">Wanderly Global Experiences Ltd.</span> ("Company") and <span className="font-bold border-b border-gray-300">BMW India Private Limited</span> ("Partner").
                             </p>
                             <p>
                                 <span className="font-bold">WHEREAS</span>, the Company specializes in premium travel curation, and the Partner is a world leader in luxury automobiles;
                             </p>
                             <p>
-                                <span className="font-bold">NOW, THEREFORE</span>, the parties agree to a strategic partnership to integrate BMW luxury transfer services into TripMitra's premium holiday packages across 12 major Indian cities.
+                                <span className="font-bold">NOW, THEREFORE</span>, the parties agree to a strategic partnership to integrate BMW luxury transfer services into Wanderly's premium holiday packages across 12 major Indian cities.
                             </p>
                         </div>
 
@@ -171,16 +171,16 @@ export default function PartnershipPage() {
                             <div>
                                 <div className="h-24 flex items-end mb-4">
                                     {/* Brand Logo as Signature */}
-                                    <div className="flex items-baseline transform -rotate-2 origin-bottom-left grayscale opacity-80">
-                                        <span className="text-3xl font-black font-display text-gray-900 tracking-tight">
-                                            Trip<span className="text-gray-700">Mitra</span>
+                                    <div className="flex items-center gap-1 transform -rotate-2 origin-bottom-left grayscale opacity-80">
+                                        <span className="text-2xl font-black font-display text-gray-900 tracking-[0.2em] uppercase">
+                                            Wanderly
                                         </span>
-                                        <span className="text-3xl font-black font-display text-gray-500">Aj</span>
+                                        <div className="w-1.5 h-1.5 rounded-full bg-gray-900"></div>
                                     </div>
                                 </div>
                                 <div className="border-t border-gray-400 pt-2">
                                     <p className="font-bold text-gray-900 text-sm uppercase">Avi Jagtap</p>
-                                    <p className="text-xs text-gray-500 uppercase tracking-wider">CEO, TripMitra</p>
+                                    <p className="text-xs text-gray-500 uppercase tracking-wider">Founder, Wanderly</p>
                                 </div>
                             </div>
                             <div>

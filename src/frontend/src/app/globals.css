@@ -1,55 +1,52 @@
 @import "tailwindcss";
 
 @theme {
-  /* Colors */
-  --color-primary: #1A73E8;
-  /* Blue */
-  --color-secondary: #2C5F2D;
-  /* Forest Green */
-  --color-accent: #E5B80B;
-  /* Gold */
-  --color-beige: #E8DCC8;
-  /* Sand Beige */
+  /* Colors - WANDERLY Global Design System */
+  --color-primary: #1A1F2C;
+  /* Deep Charcoal/Navy */
+  --color-secondary: #475569;
+  /* Slate/Muted Navy */
+  --color-accent: #0D9488;
+  /* Premium Teal */
+  --color-coral: #FF7F50;
+  /* Discovery Coral */
+  --color-sand: #F8F9FA;
+  /* Light Neutral Background */
+  --color-gold: #B45309;
+  /* Trust/Ratings (Legacy) */
+
   --color-background: #ffffff;
-  --color-foreground: #171717;
+  --color-foreground: #0F172A;
 
-  /* Fonts */
-  --font-display: var(--font-poppins), sans-serif;
-  --font-body: var(--font-inter), sans-serif;
+  /* Fonts - Optimized for Premium Travel */
+  --font-display: var(--font-display), sans-serif;
+  --font-body: var(--font-body), sans-serif;
+  --font-serif: var(--font-serif), serif;
 
-  /* Spacing / Radius adjustments if needed, but defaults are usually fine for modern look */
-  --radius-lg: 0.75rem;
-  --radius-md: 0.5rem;
-  --radius-sm: 0.25rem;
+  /* Premium Radius System */
+  --radius-xl: 1.5rem;
+  --radius-2xl: 2rem;
+  --radius-3xl: 3rem;
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #F8F5F2;
+  /* Sand Stone Paper */
+  --foreground: #0F172A;
 }
 
 .dark {
-  --background: #0a0a0a;
-  --foreground: #ededed;
+  --background: #0F172A;
+  --foreground: #F8F5F2;
 }
 
-/* Custom Utilities / Base Styles */
 @layer base {
   body {
-    background-image: url('/images/sea_beach_background.png');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    color: var(--color-foreground);
-    @apply font-body min-h-screen;
+    background-color: var(--background);
+    color: var(--foreground);
+    @apply font-body min-h-screen selection:bg-accent/20;
+    transition: background-color 0.3s ease;
   }
-
-  /* Add a dark overlay to ensuring text readability is handled in layout or specific sections, 
-     but for the body we can rely on sections having backgrounds. 
-     However, to ensure it's not too bright, we can use a pseudo-element or just trust the design. 
-     Let's treat the body as the canvas. 
-  */
 
   h1,
   h2,
@@ -57,26 +54,39 @@
   h4,
   h5,
   h6 {
-    @apply font-display tracking-tight;
+    @apply font-display tracking-tight font-black;
+  }
+
+  p {
+    @apply leading-relaxed text-gray-600 dark:text-gray-400;
   }
 }
 
-/* Glassmorphism Utilities */
+/* Glassmorphism & UI Accents */
 @layer utilities {
   .glass {
-    @apply bg-white/10 backdrop-blur-md border border-white/20 shadow-xl;
-  }
-
-  .glass-dark {
-    @apply bg-black/40 backdrop-blur-md border border-white/10 shadow-xl;
+    @apply bg-white/60 dark:bg-black/60 backdrop-blur-xl border border-white/20 shadow-2xl;
   }
 
   .glass-card {
-    @apply bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm shadow-lg hover:shadow-2xl transition-all duration-300;
+    @apply bg-white/90 dark:bg-gray-900/90 backdrop-blur-xl border border-white/20 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2;
+  }
+
+  .premium-shadow {
+    box-shadow: 0 40px 100px -20px rgba(15, 23, 42, 0.1);
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-gold;
+  }
+
+  /* Spacing Helpers */
+  .section-spacing {
+    @apply py-24 md:py-32;
   }
 }
 
-/* Scrollbar hiding for clean UI */
+/* Scrollbar refinement */
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }

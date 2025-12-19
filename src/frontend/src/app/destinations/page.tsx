@@ -79,9 +79,9 @@ export default function DestinationsPage() {
             <Navbar />
 
             <div className="pt-32 pb-20 container mx-auto px-4 md:px-6">
-                <div className="text-center mb-12">
-                    <h1 className="text-4xl md:text-5xl font-bold font-display text-gray-900 mb-4">Explore India</h1>
-                    <p className="text-gray-500 max-w-2xl mx-auto text-lg">Choose from our curated list of premium destinations across the country.</p>
+                <div className="text-center mb-16">
+                    <h1 className="text-5xl md:text-7xl font-black font-display text-gray-900 mb-6 tracking-tighter">The Art of Discovery</h1>
+                    <p className="text-gray-500 max-w-2xl mx-auto text-xl font-medium italic">Choose from our curated selection of boutique destinations and global experiences.</p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

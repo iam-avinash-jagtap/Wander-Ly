@@ -1,23 +1,29 @@
 import type { Metadata } from "next";
-import { Poppins, Inter } from "next/font/google"; // Poppins for headings, Inter for body
+import { Manrope, Inter, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 
-const poppins = Poppins({
-  variable: "--font-poppins",
+const manrope = Manrope({
+  variable: "--font-display",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800"],
+});
+
+const inter = Inter({
+  variable: "--font-body",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
 });
 
-const inter = Inter({
-  variable: "--font-inter",
+const serif = Instrument_Serif({
+  variable: "--font-serif",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
+  weight: ["400"],
 });
 
 export const metadata: Metadata = {
-  title: "TripMitraAj - Experience India",
-  description: "Premium Trip Booking across India",
+  title: "WANDERLY | Global Travel Experiences",
+  description: "Boutique, premium travel and experience booking platform for the modern explorer.",
 };
 
 
@@ -29,7 +35,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${poppins.variable} ${inter.variable} antialiased font-body text-gray-900 bg-white`}
+        className={`${manrope.variable} ${inter.variable} ${serif.variable} antialiased font-body text-gray-900 bg-white`}
       >
         <ThemeProvider
           attribute="class"

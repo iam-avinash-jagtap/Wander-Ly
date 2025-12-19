@@ -58,7 +58,7 @@ export default function AboutPage() {
             <section className="py-24 container mx-auto px-4">
                 <div className="max-w-4xl mx-auto text-center space-y-12">
                     <div>
-                        <span className="text-blue-600 font-bold uppercase tracking-widest text-sm mb-2 block">Who We Are</span>
+                        <span className="text-teal-600 font-bold uppercase tracking-widest text-sm mb-2 block">Who We Are</span>
                         <h2 className="text-4xl font-bold text-gray-900 mb-6">Real People. Real Journeys.</h2>
                         <p className="text-xl text-gray-600 leading-relaxed">
                             Every itinerary on our website is created by people who have actually been there, felt the cold winds, missed sunsets, fixed bikes on mountain roads, waited for perfect sunrises, and celebrated trips like milestones.
@@ -73,7 +73,7 @@ export default function AboutPage() {
                             { icon: Map, label: "Premium Tours" }
                         ].map((item, idx) => (
                             <div key={idx} className="flex flex-col items-center">
-                                <div className="w-16 h-16 bg-gray-50 rounded-full flex items-center justify-center mb-4 text-blue-600">
+                                <div className="w-16 h-16 bg-gray-50 rounded-full flex items-center justify-center mb-4 text-teal-600">
                                     <item.icon className="w-8 h-8" />
                                 </div>
                                 <span className="font-bold text-gray-900">{item.label}</span>
@@ -89,7 +89,7 @@ export default function AboutPage() {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                         <div className="space-y-8">
                             <h2 className="text-4xl font-bold text-gray-900 font-display">
-                                “If our team hasn’t lived it, <br /> <span className="text-blue-600">we don’t sell it.”</span>
+                                “If our team hasn’t lived it, <br /> <span className="text-teal-600">we don’t sell it.”</span>
                             </h2>
                             <p className="text-lg text-gray-600 leading-relaxed">
                                 All photos you see across our website are best clicks from our own team, captured during real trips from actual destinations we operate. No stock promises. Only real journeys.
@@ -172,7 +172,7 @@ export default function AboutPage() {
                         <span className="text-white font-bold text-2xl">We promise clarity, care, and unforgettable experiences.</span>
                     </p>
 
-                    <a href="/contact" className="inline-block px-8 py-4 bg-blue-600 text-white font-bold rounded-full hover:bg-blue-700 transition-colors shadow-lg shadow-blue-900/50">
+                    <a href="/contact" className="inline-block px-8 py-4 bg-teal-600 text-white font-bold rounded-full hover:bg-teal-700 transition-colors shadow-lg shadow-blue-900/50">
                         Start Your Journey
                     </a>
                 </div>

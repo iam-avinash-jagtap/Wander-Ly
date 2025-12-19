@@ -2,8 +2,9 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Star, MapPin, Clock } from "lucide-react";
+import { Star, MapPin, Clock, ArrowRight, ShieldCheck } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
 
 interface DestinationCardProps {
     title: string;
@@ -29,57 +30,79 @@ export function DestinationCard({
     className
 }: DestinationCardProps) {
     return (
-        <div className={cn("group rounded-xl overflow-hidden bg-white shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1", className)}>
+        <motion.div
+            whileHover={{ y: -12 }}
+            className={cn(
+                "group relative bg-white dark:bg-gray-900 rounded-[3rem] overflow-hidden border border-gray-100 dark:border-gray-800/50 shadow-sm hover:shadow-[0_40px_80px_-20px_rgba(15,23,42,0.15)] transition-all duration-700",
+                className
+            )}
+        >
             <Link href={href}>
-                <div className="relative h-64 overflow-hidden">
+                {/* Image Section */}
+                <div className="relative h-80 overflow-hidden">
                     <Image
                         src={image}
                         alt={title}
                         fill
-                        className="object-cover transition-transform duration-500 group-hover:scale-110"
+                        className="object-cover transition-transform duration-1000 group-hover:scale-110"
                     />
-                    <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-md flex items-center shadow-sm">
-                        <Star className="w-4 h-4 text-accent fill-accent mr-1" />
-                        <span className="text-xs font-bold text-gray-800">{rating}</span>
+
+                    {/* Sophisticated Gradient Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+
+                    {/* Top Badges */}
+                    <div className="absolute top-6 left-6 flex gap-3">
+                        {category && (
+                            <span className="bg-white/95 text-primary text-[10px] font-black uppercase tracking-[0.25em] px-5 py-2 rounded-full shadow-2xl border border-white/20 backdrop-blur-md group-hover:bg-accent group-hover:text-white transition-colors duration-500">
+                                {category}
+                            </span>
+                        )}
+                        <span className="bg-black/80 backdrop-blur-md text-white text-[10px] font-black px-4 py-2 rounded-full flex items-center gap-2 shadow-xl border border-white/10">
+                            <Star className="w-3.5 h-3.5 text-gold fill-gold" />
+                            {rating}
+                        </span>
                     </div>
-                    {category && (
-                        <div className="absolute top-4 left-4 bg-primary/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-white uppercase tracking-wide">
-                            {category}
+
+                    {/* Interactive Bottom Label (Appear on Hover) */}
+                    <div className="absolute inset-x-0 bottom-0 p-8 translate-y-full group-hover:translate-y-0 transition-transform duration-700 ease-out">
+                        <div className="flex items-center gap-3 text-white/90 text-[10px] font-black uppercase tracking-[0.3em] bg-white/10 backdrop-blur-2xl px-6 py-3 rounded-2xl border border-white/20 shadow-2xl">
+                            <ShieldCheck className="w-4 h-4 text-emerald-400" />
+                            Elite Choice
                         </div>
-                    )}
+                    </div>
                 </div>
 
-                <div className="p-5">
-                    <div className="flex items-start justify-between mb-2">
-                        <div>
-                            <h3 className="text-xl font-bold font-display text-gray-900 group-hover:text-primary transition-colors">
-                                {title}
-                            </h3>
-                            <div className="flex items-center text-gray-500 text-sm mt-1">
-                                <MapPin className="w-4 h-4 mr-1" />
-                                <span>{location}</span>
+                {/* Content Section - Simplified for Luxury Feel */}
+                <div className="p-10">
+                    <div className="mb-6">
+                        <div className="flex items-center gap-2 mb-2">
+                            <MapPin className="w-3.5 h-3.5 text-accent" />
+                            <span className="text-[10px] font-black text-secondary uppercase tracking-[0.2em]">{location}</span>
+                        </div>
+                        <h3 className="text-3xl font-black font-display text-primary dark:text-white leading-[1.1] group-hover:text-accent transition-colors duration-500">
+                            {title}
+                        </h3>
+                    </div>
+
+                    {/* Pricing & CTA Row */}
+                    <div className="flex items-end justify-between border-t border-gray-50 dark:border-gray-800/50 pt-8 mt-4">
+                        <div className="flex flex-col">
+                            <div className="flex items-center gap-2 text-[9px] font-bold text-secondary/60 uppercase tracking-widest mb-1.5">
+                                <Clock className="w-3.5 h-3.5" />
+                                {duration}
+                            </div>
+                            <div className="flex items-baseline gap-1.5">
+                                <span className="text-3xl font-black text-primary dark:text-white tracking-tight">{price}</span>
+                                <span className="text-[10px] text-secondary font-black uppercase tracking-tighter opacity-50">/ Head</span>
                             </div>
                         </div>
-                    </div>
 
-                    <div className="flex items-center text-gray-500 text-xs mb-4 space-x-4">
-                        <div className="flex items-center bg-gray-50 px-2 py-1 rounded">
-                            <Clock className="w-3 h-3 mr-1" />
-                            <span>{duration}</span>
-                        </div>
-                    </div>
-
-                    <div className="flex items-center justify-between border-t border-gray-100 pt-4 mt-2">
-                        <div className="flex flex-col">
-                            <span className="text-xs text-gray-400">Starting from</span>
-                            <span className="text-lg font-bold text-primary">{price}</span>
-                        </div>
-                        <div role="button" className="text-sm font-semibold text-primary border border-primary px-4 py-2 rounded-lg hover:bg-primary hover:text-white transition-all cursor-pointer">
-                            View Details
+                        <div className="relative h-14 w-14 bg-primary dark:bg-accent rounded-2xl flex items-center justify-center text-white transition-all duration-500 group-hover:rounded-full group-hover:bg-accent group-hover:rotate-45 shadow-lg group-hover:shadow-accent/40">
+                            <ArrowRight className="w-6 h-6 transition-transform group-hover:-rotate-45" strokeWidth={2.5} />
                         </div>
                     </div>
                 </div>
             </Link>
-        </div>
+        </motion.div>
     );
 }

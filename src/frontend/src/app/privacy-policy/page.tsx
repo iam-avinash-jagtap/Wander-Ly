@@ -27,7 +27,7 @@ export default function PrivacyPolicyPage() {
                     {/* Information We Collect */}
                     <section className="flex gap-6">
                         <div className="flex-shrink-0 hidden md:block">
-                            <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600">
+                            <div className="w-12 h-12 bg-teal-50 rounded-xl flex items-center justify-center text-teal-600">
                                 <UserCheck className="w-6 h-6" />
                             </div>
                         </div>
@@ -35,15 +35,15 @@ export default function PrivacyPolicyPage() {
                             <h2 className="text-2xl font-bold text-gray-900 mb-4">Information We Collect</h2>
                             <ul className="space-y-3 text-gray-600">
                                 <li className="flex items-start">
-                                    <span className="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                    <span className="w-2 h-2 bg-teal-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
                                     <span>Name, phone number, email address</span>
                                 </li>
                                 <li className="flex items-start">
-                                    <span className="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                    <span className="w-2 h-2 bg-teal-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
                                     <span>Travel preferences & enquiry details</span>
                                 </li>
                                 <li className="flex items-start">
-                                    <span className="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                    <span className="w-2 h-2 bg-teal-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
                                     <span>Payment-related information (processed securely via third parties)</span>
                                 </li>
                             </ul>

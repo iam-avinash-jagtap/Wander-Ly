@@ -44,7 +44,7 @@ export default function FAQsPage() {
         <main className="min-h-screen bg-gray-50">
             <Navbar />
 
-            <div className="bg-blue-600 py-24 text-center text-white relative overflow-hidden">
+            <div className="bg-teal-600 py-24 text-center text-white relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0 opacity-20">
                     <div className="absolute top-[-50px] right-[-50px] w-64 h-64 bg-white rounded-full blur-3xl"></div>
                     <div className="absolute bottom-[-50px] left-[-50px] w-64 h-64 bg-cyan-400 rounded-full blur-3xl"></div>
@@ -54,7 +54,7 @@ export default function FAQsPage() {
                         <HelpCircle className="w-8 h-8 text-yellow-400" />
                     </div>
                     <h1 className="text-4xl md:text-5xl font-black font-display mb-4">Frequently Asked Questions</h1>
-                    <p className="text-xl text-blue-100 max-w-2xl mx-auto">Everything you need to know about your journey with TripMitra.</p>
+                    <p className="text-xl text-teal-50 max-w-2xl mx-auto">Everything you need to know about your journey with Wanderly.</p>
                 </div>
             </div>
 
@@ -73,7 +73,7 @@ export default function FAQsPage() {
                                 className="w-full flex items-center justify-between p-6 text-left hover:bg-gray-50 transition-colors"
                             >
                                 <span className="font-bold text-lg text-gray-900 pr-8">{faq.question}</span>
-                                <span className={`p-2 rounded-full transition-colors ${openIndex === index ? 'bg-blue-100 text-blue-600' : 'bg-gray-100 text-gray-500'}`}>
+                                <span className={`p-2 rounded-full transition-colors ${openIndex === index ? 'bg-teal-100 text-teal-600' : 'bg-gray-100 text-gray-500'}`}>
                                     {openIndex === index ? <Minus className="w-5 h-5" /> : <Plus className="w-5 h-5" />}
                                 </span>
                             </button>
@@ -96,7 +96,7 @@ export default function FAQsPage() {
                 </div>
 
                 <div className="mt-16 text-center bg-white p-8 rounded-3xl shadow-lg border border-gray-100">
-                    <MessageCircle className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+                    <MessageCircle className="w-12 h-12 text-teal-600 mx-auto mb-4" />
                     <h3 className="text-2xl font-bold text-gray-900 mb-2">Still have questions?</h3>
                     <p className="text-gray-500 mb-6">Can't find the answer you're looking for? Please chat to our friendly team.</p>
                     <a href="/contact" className="px-8 py-3 bg-gray-900 text-white font-bold rounded-xl hover:bg-black transition-colors inline-block">
