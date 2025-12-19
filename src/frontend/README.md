@@ -1,4 +1,4 @@
-# TripMitraAj – Premium Travel Web
+# WanderLy – Premium Travel Web
 
 ## 📖 Overview
 A modern, premium‑looking travel website built with **Next.js 14**, **Tailwind CSS**, **Framer Motion**, and **Lucide‑React**. It showcases beautiful pages such as **About Us**, **Travel Blog**, **Partnership**, and a full booking flow. All components are styled with glass‑morphism, gradients, and micro‑animations to give a state‑of‑the‑art user experience.
