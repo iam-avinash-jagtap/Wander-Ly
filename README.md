@@ -1,402 +1,277 @@
-# Wanderly - Premium Travel Booking Platform 🌍
 
-A boutique, premium travel and experience booking platform for modern explorers. Built with cutting-edge technologies to deliver stunning visuals, smooth animations, and exceptional user experience.
+# Wanderly – Premium Travel Booking Platform 🌍
 
-## 🚀 Quick Start with Docker
+**Wanderly** is a boutique, premium travel and experience booking platform built for modern explorers.
+Designed with a strong focus on **UI/UX, performance, and scalability**, and deployed using **Docker on AWS EC2**.
 
-### Prerequisites
-- [Docker](https://www.docker.com/get-started) (version 20.10+)
-- [Docker Compose](https://docs.docker.com/compose/install/) (version 2.0+)
+---
 
-### One-Command Deployment
+## 🚀 Production Deployment on AWS EC2 (Docker)
 
-```bash
-docker-compose up --build
+This guide explains how to deploy Wanderly on an **EC2 instance running Amazon Linux** using Docker & Docker Compose.
+
+---
+
+## 🧱 Architecture Overview
+
 ```
-
-That's it! The application will be available at:
-- **Frontend**: http://localhost:3000
-- **Backend API**: http://localhost:5000
-- **MongoDB**: localhost:27017
-
-### Stop the Application
-
-```bash
-docker-compose down
-```
-
-To remove all data (including database):
-```bash
-docker-compose down -v
+Internet
+   |
+   | (HTTP / HTTPS)
+   |
+EC2 Instance (Amazon Linux)
+   |
+   ├── Nginx (Reverse Proxy)
+   │      └── Port 80 / 443
+   |
+   ├── Frontend (Next.js)
+   │      └── Port 3000 (internal)
+   |
+   ├── Backend (Express API)
+   │      └── Port 5000 (internal)
+   |
+   └── MongoDB
+          └── Port 27017 (internal only)
 ```
 
 ---
 
-## 🏗️ Architecture
+## 🔐 Required AWS Security Group Ports
 
-### Technology Stack
+Configure the **EC2 Security Group** with the following inbound rules:
 
-#### Frontend
-- **Framework**: [Next.js 16](https://nextjs.org/) with App Router
-- **Language**: TypeScript 5
-- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
-- **Animations**: [Framer Motion 12](https://www.framer.com/motion/)
-- **Icons**: [Lucide React](https://lucide.dev/)
-- **Theme**: next-themes (Dark/Light mode)
-- **PDF Generation**: jsPDF + html2canvas
-- **Effects**: canvas-confetti
+| Port  | Protocol | Source         | Purpose                |
+| ----- | -------- | -------------- | ---------------------- |
+| 22    | TCP      | Your IP        | SSH Access             |
+| 80    | TCP      | 0.0.0.0/0      | HTTP (Public Access)   |
+| 443   | TCP      | 0.0.0.0/0      | HTTPS (Optional – SSL) |
+| 3000  | TCP      | ❌ NOT REQUIRED | Internal (Docker only) |
+| 5000  | TCP      | ❌ NOT REQUIRED | Internal (Docker only) |
+| 27017 | TCP      | ❌ NOT REQUIRED | Internal DB            |
 
-#### Backend
-- **Runtime**: Node.js 18
-- **Framework**: Express.js 5
-- **Database**: MongoDB with Mongoose ODM
-- **Environment**: dotenv
-- **CORS**: Configured for cross-origin requests
-
-#### DevOps
-- **Containerization**: Docker & Docker Compose
-- **Reverse Proxy**: Nginx (production ready)
+⚠️ **Do NOT expose ports 3000, 5000, or 27017 publicly in production.**
 
 ---
 
-## � Manual Installation (Without Docker)
+## 🖥️ EC2 Instance Requirements
 
-### Prerequisites
-- Node.js 18+ ([Download](https://nodejs.org/))
-- MongoDB 6+ ([Download](https://www.mongodb.com/try/download/community))
+* **OS**: Amazon Linux 2 / Amazon Linux 2023
+* **Instance Type**: `t2.micro` (minimum) / `t3.small` recommended
+* **Storage**: 20 GB minimum
+* **Elastic IP**: Recommended
 
-### Step 1: Clone the Repository
+---
+
+## ⚙️ EC2 Initial Setup (Amazon Linux)
+
+```bash
+# Connect to EC2
+ssh -i your-key.pem ec2-user@<EC2_PUBLIC_IP>
+
+# Update system
+sudo yum update -y
+```
+
+### Install Docker
+
+```bash
+sudo yum install docker -y
+sudo systemctl start docker
+sudo systemctl enable docker
+sudo usermod -aG docker ec2-user
+logout
+```
+
+Login again for Docker group changes to apply.
+
+### Install Docker Compose
+
+```bash
+sudo curl -L https://github.com/docker/compose/releases/download/v2.27.0/docker-compose-linux-x86_64 \
+-o /usr/local/bin/docker-compose
+
+sudo chmod +x /usr/local/bin/docker-compose
+docker-compose version
+```
+
+---
+
+## 📦 Clone the Repository
 
 ```bash
 git clone <repository-url>
-cd wonderly
+cd wanderly
 ```
-
-### Step 2: Backend Setup
-
-```bash
-cd src/backend
-
-# Install dependencies
-npm install
-
-# Create .env file
-echo "MONGO_URI=mongodb://localhost:27017/wanderly
-PORT=5000" > .env
-
-# Start MongoDB (if running locally)
-# Then start the backend
-node server.js
-```
-
-Backend will run at: **http://localhost:5000**
-
-### Step 3: Frontend Setup
-
-```bash
-cd src/frontend
-
-# Install dependencies
-npm install
-
-# Start development server
-npm run dev
-```
-
-Frontend will run at: **http://localhost:3000**
 
 ---
 
-## 🐳 Docker Deployment Guide
+## 🐳 Docker-Based Deployment (Recommended)
 
-### Understanding the Docker Setup
-
-The application uses a **multi-container** architecture with three services:
-
-1. **Frontend** - Next.js application (Port 3000)
-2. **Backend** - Express API (Port 5000)
-3. **MongoDB** - Database (Port 27017)
-
-### File Structure
-
-```
-wonderly/
-├── docker-compose.yml           # Orchestrates all services
-├── src/
-│   ├── frontend/
-│   │   ├── Dockerfile          # Frontend container config
-│   │   ├── package.json
-│   │   └── ...
-│   └── backend/
-│       ├── Dockerfile          # Backend container config
-│       ├── package.json
-│       └── server.js
-└── README.md
-```
-
-### Step-by-Step Docker Deployment
-
-#### 1. Build All Images
+### One Command Deployment
 
 ```bash
-docker-compose build
+docker-compose up --build -d
 ```
 
-This command:
-- Builds the frontend Next.js image
-- Builds the backend Express image
-- Pulls the MongoDB image from Docker Hub
+---
 
-#### 2. Start All Services
+## 🌐 Application Access (Production)
 
-```bash
-docker-compose up
-```
+| Service     | URL                          |
+| ----------- | ---------------------------- |
+| Website     | `http://<EC2_PUBLIC_IP>`     |
+| Backend API | `http://<EC2_PUBLIC_IP>/api` |
+| MongoDB     | Internal (Docker Network)    |
 
-Or to run in detached mode (background):
-```bash
-docker-compose up -d
-```
+If Nginx is configured:
 
-#### 3. View Logs
+* Frontend → Port **80**
+* Backend → `/api` route
 
-```bash
-# All services
-docker-compose logs -f
+---
 
-# Specific service
-docker-compose logs -f frontend
-docker-compose logs -f backend
-docker-compose logs -f mongodb
-```
-
-#### 4. Restart a Service
+## 🔁 Docker Management Commands
 
 ```bash
-docker-compose restart frontend
-docker-compose restart backend
-```
-
-#### 5. Stop Services
-
-```bash
-docker-compose stop
-```
-
-#### 6. Remove Containers
-
-```bash
-docker-compose down
-```
-
-#### 7. Clean Everything (including volumes)
-
-```bash
-docker-compose down -v
-docker system prune -a
-```
-
-### Troubleshooting Docker Issues
-
-#### Issue: Port Already in Use
-
-```bash
-# Find what's using the port
-netstat -ano | findstr :3000
-netstat -ano | findstr :5000
-
-# Kill the process (Windows)
-taskkill /PID <process_id> /F
-```
-
-#### Issue: Database Connection Failed
-
-```bash
-# Check if MongoDB container is running
+# View running containers
 docker-compose ps
 
-# Restart MongoDB
-docker-compose restart mongodb
+# Logs
+docker-compose logs -f
 
-# View MongoDB logs
-docker-compose logs mongodb
-```
+# Restart services
+docker-compose restart
 
-#### Issue: Build Failures
-
-```bash
-# Clean build
+# Stop services
 docker-compose down
-docker-compose build --no-cache
-docker-compose up
+
+# Remove everything including DB
+docker-compose down -v
 ```
-
-#### Issue: Frontend Image Issues
-
-```bash
-# Add these domains to next.config.js if seeing image errors
-# (already configured in current setup)
-```
-
----
-
-## 🎨 Design System
-
-### Color Palette
-- **Primary**: Indigo (`#4338ca`)
-- **Secondary**: Grey shades
-- **Accent**: Teal (`#0d9488`)
-- **Coral**: `#FF7F50`
-- **Sand**: `#F5F2E9`
-- **Gold**: `#D4AF37`
-
-### Typography
-- **Display Font**: Manrope (Bold headings)
-- **Body Font**: Inter (Readable text)
-- **Serif Font**: Instrument Serif (Elegant accents)
-
-### Components
-- Glassmorphism effects
-- Smooth scroll animations
-- Premium card designs
-- Responsive navigation
-- Dark/Light mode toggle
 
 ---
 
 ## 📁 Project Structure
 
 ```
-wonderly/
+wanderly/
+├── docker-compose.yml
 ├── src/
 │   ├── frontend/
-│   │   ├── src/
-│   │   │   ├── app/
-│   │   │   │   ├── page.tsx           # Home page
-│   │   │   │   ├── offers/            # Rishikesh package
-│   │   │   │   ├── destinations/      # Travel destinations
-│   │   │   │   ├── book/              # Booking page
-│   │   │   │   ├── contact/           # Contact form
-│   │   │   │   └── layout.tsx         # Root layout
-│   │   │   ├── components/
-│   │   │   │   ├── home/              # Home components
-│   │   │   │   │   ├── Hero.tsx
-│   │   │   │   │   ├── DestinationCard.tsx
-│   │   │   │   │   ├── InspirationSection.tsx
-│   │   │   │   │   └── TrustSection.tsx
-│   │   │   │   ├── layout/            # Layout components
-│   │   │   │   │   ├── Navbar.tsx
-│   │   │   │   │   └── Footer.tsx
-│   │   │   │   └── theme-provider.tsx
-│   │   │   ├── data/
-│   │   │   │   └── destinations.ts    # Destination data
-│   │   │   ├── lib/                   # Utilities
-│   │   │   └── globals.css            # Global styles
-│   │   ├── public/
-│   │   │   └── images/                # Static images
-│   │   ├── next.config.js
-│   │   ├── tailwind.config.ts
-│   │   ├── package.json
-│   │   └── Dockerfile
-│   └── backend/
-│       ├── server.js                  # Express server
-│       ├── package.json
-│       ├── .env
-│       └── Dockerfile
-├── docker-compose.yml
+│   │   ├── Dockerfile
+│   │   └── ...
+│   ├── backend/
+│   │   ├── Dockerfile
+│   │   └── server.js
+│   └── nginx/
+│       └── default.conf
 └── README.md
 ```
 
 ---
 
-## 🚢 Production Deployment
+## 🔧 Environment Variables (Production)
 
-### Environment Variables
+### Backend `.env`
 
-#### Frontend (.env.local)
-```env
-NEXT_PUBLIC_API_URL=http://localhost:5000
-```
-
-#### Backend (.env)
 ```env
 MONGO_URI=mongodb://mongodb:27017/wanderly
 PORT=5000
 NODE_ENV=production
 ```
 
-### Build for Production
+### Frontend `.env.local`
 
-```bash
-# Frontend
-cd src/frontend
-npm run build
-npm start
-
-# Backend
-cd src/backend
-NODE_ENV=production node server.js
-```
-
-### Docker Production Build
-
-```bash
-docker-compose -f docker-compose.prod.yml up --build -d
+```env
+NEXT_PUBLIC_API_URL=/api
 ```
 
 ---
 
-## 🧪 Development Tips
+## 🌍 Nginx Reverse Proxy (Recommended)
 
-### Hot Reload
-Both frontend and backend support hot reload in development mode.
+Example `nginx.conf`:
 
-### Code Quality
-```bash
-# Frontend linting
-cd src/frontend
-npm run lint
+```nginx
+server {
+    listen 80;
+
+    location / {
+        proxy_pass http://frontend:3000;
+    }
+
+    location /api {
+        proxy_pass http://backend:5000;
+    }
+}
 ```
 
-### Clear Cache
-```bash
-# Frontend
-rm -rf .next
-npm run dev
+This allows:
 
-# Docker
-docker-compose down
-docker-compose build --no-cache
-```
+* Clean URLs
+* Single public port (80)
+* Better security
 
 ---
 
-## 📞 Support & Contact
+## 🔐 HTTPS (Optional but Recommended)
 
-- **Website**: Wanderly Travel Platform
-- **Phone**: +91 88884 74060
-- **WhatsApp**: [Chat with Guide](https://wa.me/918888474060)
+Use **Let’s Encrypt + Certbot**:
+
+```bash
+sudo yum install certbot -y
+```
+
+Then configure SSL for Nginx.
 
 ---
 
-## 📝 License
+## 🚨 Production Best Practices
 
-This project is proprietary software. All rights reserved.
+✅ Use **Elastic IP**
+✅ Enable **HTTPS**
+✅ Do NOT expose MongoDB
+✅ Use `.env` files (never commit secrets)
+✅ Enable EC2 backups / snapshots
+✅ Use `docker-compose -d`
+
+---
+
+## 🧪 Health Checks
+
+```bash
+docker ps
+curl http://localhost
+curl http://localhost/api/health
+```
 
 ---
 
 ## 🎯 Features
 
-- ✨ **Premium UI/UX** - Modern, clean, and aesthetic design
-- 🌙 **Dark Mode** - Seamless light/dark theme switching
-- 📱 **Fully Responsive** - Perfect on all devices
-- 🎭 **Smooth Animations** - Framer Motion powered
-- 🏔️ **Destination Showcase** - Beautiful travel cards
-- 💳 **Booking System** - Complete booking flow
-- 📧 **Contact Integration** - Phone & WhatsApp support
-- 🐳 **Docker Ready** - One-command deployment
-- ⚡ **Fast Performance** - Optimized Next.js build
+✨ Premium UI / UX
+🌙 Dark Mode
+📱 Fully Responsive
+🎭 Framer Motion Animations
+🏔️ Destination Showcase
+💳 Booking Flow
+📧 WhatsApp & Contact Integration
+🐳 Dockerized & Cloud Ready
+⚡ Optimized Next.js Build
 
 ---
 
-**Built with ❤️ for travelers, by travelers**
+## 📞 Support & Contact
+
+**Wanderly Travel Platform**
+📞 Phone: +91 88884 74060
+💬 WhatsApp: Chat with Guide
+
+---
+
+## 📝 License
+
+This project is proprietary software.
+All rights reserved.
+
+---
