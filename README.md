@@ -188,23 +188,8 @@ NEXT_PUBLIC_API_URL=/api
 
 ---
 
-## 🌍 Nginx Reverse Proxy (Recommended)
+## 🌍 Nginx Reverse Proxy
 
-Example `nginx.conf`:
-
-```nginx
-server {
-    listen 80;
-
-    location / {
-        proxy_pass http://frontend:3000;
-    }
-
-    location /api {
-        proxy_pass http://backend:5000;
-    }
-}
-```
 
 This allows:
 
@@ -214,7 +199,7 @@ This allows:
 
 ---
 
-## 🔐 HTTPS (Optional but Recommended)
+## 🔐 HTTPS
 
 Use **Let’s Encrypt + Certbot**:
 
@@ -244,6 +229,107 @@ docker ps
 curl http://localhost
 curl http://localhost/api/health
 ```
+
+---
+Got it 👍
+Here it is **cleanly formatted in proper Markdown**, ready to **paste directly into your `README.md`**:
+
+---
+
+## ✅ Acsess App 
+
+After this setup, you access your website using:
+
+```text
+http://<EC2_PUBLIC_IP>
+```
+
+**NOT**
+
+* ❌ `:3000`
+* ❌ `:5000`
+* ❌ `localhost`
+
+✅ **Only port 80 is exposed via Nginx.**
+
+---
+
+## 🧭 HOW ACCESS WORKS (UNDER THE HOOD)
+
+```text
+Browser
+  |
+  |  http://EC2_PUBLIC_IP
+  |
+AWS Security Group (Port 80 allowed)
+  |
+Nginx container (Port 80)
+  |
+  ├── "/"     → frontend:3000 (Next.js)
+  └── "/api"  → backend:5000 (Express)
+```
+
+---
+
+### 🔁 Request Flow
+
+* Frontend loads from `/`
+* Backend API loads from `/api`
+* MongoDB is **internal only**
+
+---
+
+## 🟢 STEP-BY-STEP: ACCESS YOUR WEBSITE
+
+### 1️⃣ Get EC2 Public IP
+
+From AWS Console:
+
+```text
+EC2 → Instances → Public IPv4 address
+```
+
+Example:
+
+```text
+3.110.xxx.xxx
+```
+
+---
+
+### 2️⃣ Make sure containers are running
+
+On your EC2 instance:
+
+```bash
+docker ps
+```
+
+You should see:
+
+```text
+nginx
+frontend
+backend
+mongodb
+```
+
+If not running, start them:
+
+```bash
+docker-compose up -d
+```
+
+---
+
+✅ **That’s it!**
+Open your browser and visit:
+
+```text
+http://<EC2_PUBLIC_IP>
+```
+
+Your **Wanderly website should load successfully** 🚀
 
 ---
 
