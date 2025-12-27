@@ -28,6 +28,9 @@ yarn-error.log*
 .env
 
 # Docker
+.dockerignore
+
+docker-compose.yml
 
 # IDEs
 .vscode/

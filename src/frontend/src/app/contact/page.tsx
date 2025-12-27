@@ -9,9 +9,9 @@ import Image from "next/image";
 export default function ContactPage() {
     const [formData, setFormData] = useState({
         name: "",
-        number: "",
+        phone: "",
         email: "",
-        subject: "", // Added subject
+        subject: "",
         message: ""
     });
 
@@ -25,42 +25,44 @@ export default function ContactPage() {
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+
+        // Basic validation
+        if (!formData.name || !formData.phone || !formData.email || !formData.subject || !formData.message) {
+            setError("Please fill in all search fields.");
+            return;
+        }
+
         setIsLoading(true);
         setError(null);
 
         try {
+            console.log("Submitting inquiry:", formData);
             const response = await fetch('/api/inquiries', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({
-                    name: formData.name,
-                    phone: formData.number,
-                    email: formData.email,
-                    subject: formData.subject,
-                    message: formData.message
-                }),
+                body: JSON.stringify(formData),
             });
 
             const data = await response.json();
 
             if (!response.ok) {
-                throw new Error(data.message || 'Something went wrong');
+                throw new Error(data.message || 'Failed to send inquiry');
             }
 
             // Success
             setShowModal(true);
             setFormData({
                 name: "",
-                number: "",
+                phone: "",
                 email: "",
                 subject: "",
                 message: ""
             });
         } catch (err: any) {
             console.error("Submission error:", err);
-            setError(err.message || "Failed to send message. Please try again.");
+            setError(err.message || "Something went wrong. Please try again later.");
         } finally {
             setIsLoading(false);
         }
@@ -170,9 +172,9 @@ export default function ContactPage() {
                                         <label className="text-sm font-bold text-gray-700 ml-1">Phone Number</label>
                                         <input
                                             type="tel"
-                                            name="number"
+                                            name="phone"
                                             required
-                                            value={formData.number}
+                                            value={formData.phone}
                                             onChange={handleChange}
                                             className="w-full px-5 py-4 rounded-xl bg-gray-50 border border-gray-200 focus:bg-white focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all outline-none font-medium"
                                             placeholder="+91 98765 43210"
