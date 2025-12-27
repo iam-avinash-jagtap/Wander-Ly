@@ -28,7 +28,7 @@ export default function ContactPage() {
 
         // Basic validation
         if (!formData.name || !formData.phone || !formData.email || !formData.subject || !formData.message) {
-            setError("Please fill in all search fields.");
+            setError("Please fill in all required fields.");
             return;
         }
 
@@ -162,7 +162,7 @@ export default function ContactPage() {
                                             type="text"
                                             name="name"
                                             required
-                                            value={formData.name}
+                                            value={formData.name || ""}
                                             onChange={handleChange}
                                             className="w-full px-5 py-4 rounded-xl bg-gray-50 border border-gray-200 focus:bg-white focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all outline-none font-medium"
                                             placeholder="John Doe"
@@ -174,7 +174,7 @@ export default function ContactPage() {
                                             type="tel"
                                             name="phone"
                                             required
-                                            value={formData.phone}
+                                            value={formData.phone || ""}
                                             onChange={handleChange}
                                             className="w-full px-5 py-4 rounded-xl bg-gray-50 border border-gray-200 focus:bg-white focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all outline-none font-medium"
                                             placeholder="+91 98765 43210"
@@ -189,7 +189,7 @@ export default function ContactPage() {
                                             type="email"
                                             name="email"
                                             required
-                                            value={formData.email}
+                                            value={formData.email || ""}
                                             onChange={handleChange}
                                             className="w-full px-5 py-4 rounded-xl bg-gray-50 border border-gray-200 focus:bg-white focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all outline-none font-medium"
                                             placeholder="john@example.com"
@@ -199,7 +199,7 @@ export default function ContactPage() {
                                         <label className="text-sm font-bold text-gray-700 ml-1">Subject</label>
                                         <select
                                             name="subject"
-                                            value={formData.subject}
+                                            value={formData.subject || ""}
                                             onChange={handleChange}
                                             className="w-full px-5 py-4 rounded-xl bg-gray-50 border border-gray-200 focus:bg-white focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all outline-none font-medium cursor-pointer"
                                         >
@@ -219,7 +219,7 @@ export default function ContactPage() {
                                         name="message"
                                         rows={5}
                                         required
-                                        value={formData.message}
+                                        value={formData.message || ""}
                                         onChange={handleChange}
                                         className="w-full px-5 py-4 rounded-xl bg-gray-50 border border-gray-200 focus:bg-white focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all outline-none font-medium resize-none"
                                         placeholder="Tell us about your travel plans, dates, and preferences..."
