@@ -31,13 +31,9 @@ export default function AdminBookings() {
         setIsLoading(true);
         setError(null);
         try {
-            const response = await fetch('/api/bookings');
-            const data = await response.json();
-            if (data.success) {
-                setBookings(data.data);
-            } else {
-                setError(data.message || "Failed to fetch bookings");
-            }
+            const res = await fetch('/api/bookings');
+            const json = await res.json();
+            setBookings(json.data);
         } catch (err) {
             console.error("Fetch error:", err);
             setError("Could not connect to the server.");

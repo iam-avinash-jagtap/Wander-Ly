@@ -31,13 +31,9 @@ export default function AdminInquiries() {
         setIsLoading(true);
         setError(null);
         try {
-            const response = await fetch('/api/inquiries');
-            const data = await response.json();
-            if (data.success) {
-                setInquiries(data.data);
-            } else {
-                setError(data.message || "Failed to fetch inquiries");
-            }
+            const res = await fetch('/api/inquiries');
+            const json = await res.json();
+            setInquiries(json.data);
         } catch (err) {
             console.error("Fetch error:", err);
             setError("Could not connect to the server.");
