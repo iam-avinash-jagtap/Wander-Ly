@@ -213,12 +213,12 @@ Then configure SSL for Nginx.
 
 ## 🚨 Production Best Practices
 
-✅ Use **Elastic IP**
-✅ Enable **HTTPS**
-✅ Do NOT expose MongoDB
-✅ Use `.env` files (never commit secrets)
-✅ Enable EC2 backups / snapshots
-✅ Use `docker-compose -d`
+✅ Use **Elastic IP** <br>
+✅ Enable **HTTPS**<br>
+✅ Do NOT expose MongoDB<br>
+✅ Use `.env` files (never commit secrets)<br>
+✅ Enable EC2 backups / snapshots<br>
+✅ Use `docker-compose -d`<br>
 
 ---
 
