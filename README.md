@@ -249,22 +249,23 @@ curl http://localhost/api/health
 
 ## 🎯 Features
 
-✨ Premium UI / UX
-🌙 Dark Mode
-📱 Fully Responsive
-🎭 Framer Motion Animations
-🏔️ Destination Showcase
-💳 Booking Flow
-📧 WhatsApp & Contact Integration
-🐳 Dockerized & Cloud Ready
-⚡ Optimized Next.js Build
+✨ Premium UI / UX <br>
+🌙 Dark Mode<br>
+📱 Fully Responsive<br>
+🎭 Framer Motion Animations<br>
+🏔️ Destination Showcase<br>
+💳 Booking Flow<br>
+📧 WhatsApp & Contact Integration<br>
+🐳 Dockerized & Cloud Ready<br>
+⚡ Optimized Next.js Build<br>
 
 ---
 
 ## 📞 Support & Contact
 
 **Wanderly Travel Platform**
-📞 Phone: +91 88884 74060
+
+📞 Phone: +91 88884 74060<br>
 💬 WhatsApp: Chat with Guide
 
 ---
