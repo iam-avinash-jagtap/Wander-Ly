@@ -36,3 +36,23 @@ exports.createBooking = async (req, res) => {
         });
     }
 };
+
+// @desc    Get all bookings
+// @route   GET /api/bookings
+// @access  Public (should be protected in production)
+exports.getBookings = async (req, res) => {
+    try {
+        const bookings = await Booking.find().sort({ createdAt: -1 });
+        res.status(200).json({
+            success: true,
+            count: bookings.length,
+            data: bookings
+        });
+    } catch (error) {
+        console.error('Fetch Bookings Error:', error);
+        res.status(500).json({
+            success: false,
+            message: 'Internal Server Error'
+        });
+    }
+};
