@@ -99,8 +99,8 @@ docker-compose version
 ## 📦 Clone the Repository
 
 ```bash
-git clone <repository-url>
-cd wanderly
+git clone https://github.com/iam-avinash-jagtap/Wander-Ly
+cd Wander-Ly
 ```
 
 ---
