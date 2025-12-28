@@ -309,5 +309,5 @@ All rights reserved.
 
 ---
 
-✨ **Wanderly — built to scale by Avinash Jagtap.**
+✨ **Wanderly — built to scale by Avinash Jagtap.** <br>
 ⚡ **Happy_Learning🎯 Happy_Clouding☁️ Jay_DevOps😜**
