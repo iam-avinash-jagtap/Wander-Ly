@@ -282,12 +282,12 @@ Docker Images → EKS → Pods → Ingress → Users
 
 ## 🔐 Production Best Practices
 
-✅ Use HTTPS (Let’s Encrypt)
-✅ Use Elastic IP
-✅ Keep MongoDB internal
-✅ Use Docker Hub images
-✅ Enable backups
-✅ Use CI/CD pipelines
+✅ Use HTTPS (Let’s Encrypt)<br>
+✅ Use Elastic IP<br>
+✅ Keep MongoDB internal<br>
+✅ Use Docker Hub images<br>
+✅ Enable backups<br>
+✅ Use CI/CD pipelines<br>
 
 ---
 
@@ -309,4 +309,5 @@ All rights reserved.
 
 ---
 
-✨ **Wanderly — built to scale from EC2 to EKS.**
+✨ **Wanderly — built to scale by Avinash Jagtap.**
+⚡ **Happy_Learning🎯 Happy_Clouding☁️ Jay_DevOps😜**
